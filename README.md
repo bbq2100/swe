@@ -14,10 +14,10 @@ Topics I am _not_ focusing on in my lecture, but which will be addressed by my c
 
 - Project Management
 - Requirements Engineering
+- Effort Estimation Techniques
 - Software Testing
 - Software Configurationsmanagement
 - Operating Software Systems
-- Effort Estimation Techniques
 
 ## Goal of the Lecture
 
