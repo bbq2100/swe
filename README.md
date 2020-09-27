@@ -36,11 +36,11 @@ After attending the lecture, students should be able to...
 
 Use Case Diagram, Class Diagram, Sequence Diagram
 
-[2 Software Design](./lectures/2/README.md)
+[2 Software Design Principles](./lectures/2/README.md)
 
 Architecture Patterns, SOLID Principles, Modularisation
 
-[3 Software Design](./lectures/3/README.md)
+[3 Software Design Patterns](./lectures/3/README.md)
 
 Design Patterns, Clean Code
 
