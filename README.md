@@ -5,7 +5,7 @@ Slides, example code from the software engineering lecture held at [FOM Berlin](
 
 The key focus of my lecture is:
 
-- Software Design and Modeling: UML, Design Patterns, Architecture Patterns, SOLID Principles, modularisation
+- Software Design and Modeling: UML, Design Patterns, Architecture Patterns, SOLID Principles, Modularisation
 - Implementing and integrating Real-Word Software Systems: Clean Code, Top-down vs Bottom-Up approach, Continuous Integration, Continuous Delivery
 
 ## Non-Focus
