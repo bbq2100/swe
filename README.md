@@ -8,7 +8,7 @@ The key focus of my lecture is:
 - Software Design and Modeling: UML, Design Patterns, Architecture Patterns, SOLID Principles, Modularisation
 - Implementing and Integrating Real-Word Software Systems: Clean Code, Top-down vs Bottom-Up approach, Continuous Integration, Continuous Delivery
 
-## ~~Non-Focus~~
+## Non-Focus
 
 Topics I am not focusing on in my lecture, but which will be addressed by my colleagues during the semester, are:
 
