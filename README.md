@@ -30,7 +30,7 @@ After attending the lecture, students should be able to...
 - Understand and being able to communicate important aspects of good software designs like loose coupling, high cohesion, modularisation and clean code
 - Design and implement software systems in modern environments by applying the shown architecture and design patterns
 
-## Lectures
+## :school: Lectures
 
 [1 UML Introduction](./lectures/1/README.md)
 
@@ -56,10 +56,10 @@ Requirements, Use Cases, Architecture, Design, Implementation, Integration
 
 Exam prep
 
-## Case Study - Implementing `TODO`
+## :microscope: Case Study - Implementing `TODO`
 
 TODO
 
-## How to Contribute?
+## :raising_hand: How to Contribute?
 
 Not sure how to contribute ideas, changes, etc. to this repository? Check [github.com/firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions/blob/master/README.md) out!
