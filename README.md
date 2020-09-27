@@ -10,7 +10,7 @@ The key focus of my lecture is:
 
 ## Non-Focus
 
-Topics I am not focusing on in my lecture, but which will be addressed by my colleagues during the semester, are:
+Topics I am _not_ focusing on in my lecture, but which will be addressed by my colleagues during the semester, are:
 
 - Project Management
 - Requirements Engineering
