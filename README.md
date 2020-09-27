@@ -18,3 +18,11 @@ Topics I am _not_ focusing on in my lecture, but which will be addressed by my c
 - Software Configurationsmanagement
 - Operating Software Systems
 - Effort Estimation Techniques
+
+## Goal of the Lecture
+
+After attending the lecture, students should be able to
+
+- using UML in order to explain software systems, to capture requirements and modell them out with appropriate UML types
+- understand and being able to communicate import aspects of good software design like loose coupling, high cohesion, modularisation and clean code techniques
+- design and implement software systems in modern environments by using the shown architecture and design patterns
