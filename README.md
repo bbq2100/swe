@@ -4,7 +4,7 @@
 
 Slides & example code from the Software Engineering lecture held WS 20/21 @ [FOM University of Applied Sciences for Economics and Management Berlin](https://www.fom.de/studiengaenge/it-management/bachelor-studiengaenge/informatik/_produkte;inhalte.html).
 
-The lecture is designed to be practical-oriented, e.g. it doesn't explain all possible UML diagram types but rather focues on few selected key topics. All explanations are accompanied by code examples. The target audience are students who are familiar with at least one high-level programming language, e.g. Java.
+The lecture is practical-oriented, e.g. it doesn't explain all possible UML diagram types but rather focuses on few selected key topics. All explanations are accompanied by code examples. The target audience are students who are familiar with at least one high-level programming language, e.g. Java.
 
 ## :mag_right: Focus
 
