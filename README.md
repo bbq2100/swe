@@ -1,4 +1,7 @@
 # Software Engineering Lecture
+
+![asd](https://media.aubi-plus.com/files/premiumprofil/logo/377e0f4-fom-hochschule-fuer-oekonomie-management-gemeinnuetzige-gesellschaft-mbh-logo.jpg)
+
 Slides, example code from the Software Engineering lecture held WS 20/21 @ [FOM Berlin](https://www.fom.de/studiengaenge/it-management/bachelor-studiengaenge/informatik/_produkte;inhalte.html)
 
 ## Focus
