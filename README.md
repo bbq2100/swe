@@ -4,14 +4,14 @@
 
 Slides, example code from the Software Engineering lecture held WS 20/21 @ [FOM Berlin](https://www.fom.de/studiengaenge/it-management/bachelor-studiengaenge/informatik/_produkte;inhalte.html)
 
-## Focus
+## :mag_right: Focus
 
 The key focus of my lecture is:
 
 - Software Design and Modeling: UML, Design Patterns, Architecture Patterns, SOLID Principles, Modularisation
 - Implementing and Integrating Real-Word Software Systems: Clean Code, Top-down vs Bottom-Up approach, Continuous Integration, Continuous Delivery
 
-## Non-Focus
+## :no_entry_sign: Non-Focus
 
 Topics I am _not_ focusing on in my lecture, but which will be addressed by my colleagues during the semester, are:
 
@@ -22,7 +22,7 @@ Topics I am _not_ focusing on in my lecture, but which will be addressed by my c
 - Software Configurationsmanagement
 - Operating Software Systems
 
-## Goal of the Lecture
+## :white_check_mark: Goal of the Lecture
 
 After attending the lecture, students should be able to
 
