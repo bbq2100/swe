@@ -1,5 +1,5 @@
 # Software Engineering Lecture
-Slides, example code from the software engineering lecture held at 20/21 @ [FOM Berlin](https://www.fom.de/studiengaenge/it-management/bachelor-studiengaenge/informatik/_produkte;inhalte.html)
+Slides, example code from the software engineering lecture held WS 20/21 @ [FOM Berlin](https://www.fom.de/studiengaenge/it-management/bachelor-studiengaenge/informatik/_produkte;inhalte.html)
 
 ## Focus
 
