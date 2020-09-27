@@ -54,6 +54,7 @@ Requirements, Use Cases, Architecture, Design, Implementation, Integration
 
 [6 Exam Preparation / Final Q&A](./lectures/6/README.md)
 
+Exam prep
 
 ## Case Study - Implementing `TODO`
 
