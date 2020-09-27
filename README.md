@@ -32,27 +32,27 @@ After attending the lecture, students should be able to...
 
 ## Lectures
 
-- [1 UML Introduction](./lectures/1/README.md)
+[1 UML Introduction](./lectures/1/README.md)
 
 Use Case Diagram, Class Diagram, Sequence Diagram
 
-- [2 Software Design](./lectures/2/README.md)
+[2 Software Design](./lectures/2/README.md)
 
 Architecture Patterns, SOLID Principles, Modularisation
 
-- [3 Software Design](./lectures/3/README.md)
+[3 Software Design](./lectures/3/README.md)
 
 Design Patterns, Clean Code
 
-- [4 Integrating Software Systems](./lectures/4/README.md)
+[4 Integrating Software Systems](./lectures/4/README.md)
 
 Continuous Integration, Continuous Delivery
 
-- [5 Case Study - Implementing `TODO`](./lectures/5/README.md)
+[5 Case Study - Implementing `TODO`](./lectures/5/README.md)
 
 Requirements, Use Cases, Architecture, Design, Implementation, Integration
 
-- [6 Exam Preparation / Final Q&A](./lectures/6/README.md)
+[6 Exam Preparation / Final Q&A](./lectures/6/README.md)
 
 
 ## Case Study - Implementing `TODO`
