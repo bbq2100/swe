@@ -1,3 +1,3 @@
-[Back](../../README.md#lectures)
+[Lectures](../../README.md#lectures)
 
 # Lecture 1 - UML
