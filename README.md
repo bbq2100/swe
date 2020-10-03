@@ -64,6 +64,19 @@ At the end of the semester we will have a look at a small software project in wh
 
 In the last lecture we will have a final look at the learned material and preparse for the examination
 
+Note that each lecture directory contains exercises and solutions for the exercises.
+
+For example, for lecture 1 you'll find the following resources under `./lectures/1`
+
+```bash
+lectures/1
+|-- README.md
+|-- exercise
+|   `-- README.md
+`-- solution
+    `-- README.md
+```
+
 ## :microscope: Case Study - Implementing `TODO`
 
 TODO

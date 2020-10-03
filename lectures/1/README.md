@@ -41,7 +41,7 @@ If we try to model out every aspect then it is harder to focus on the _important
 If you prefer something declaratively then try [PlantUML](http://www.plantuml.com). All diagrams in this script
 were created with PlantUML. You can find the sources for the diagrams in the [diagrams](./../../bin/diagrams) directory.
 
-```
+```puml
 @startuml
 left to right direction
 actor "Food Critic" as fc
@@ -74,7 +74,16 @@ In the above example the system context is `Restaurant` in which the actor `Food
 
 ### Notation
 
+![notation](https://sourcemaking.com/files/sm/images/uml/img_20.jpg)
+
 ### Includes vs Extends
+
+![diagram](https://forums.visual-paradigm.com/uploads/default/original/2X/b/b7c86c1c4b28af2f5a60616477fafe154bc04e33.png)
+
+The difference between an 'include' vs 'exclude' use case relationship is: 'include' means that a use case is automatically part
+of another use case, in the example above: when opening a book, reading is included as a use case.
+
+'exclude' is something optional - in the above example one can open a book and _optionally_ turn a page.
 
 ## Class Diagram
 
