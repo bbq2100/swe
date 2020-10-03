@@ -1,4 +1,5 @@
 [Lectures](../../README.md#school-lectures)
+[Exercises](./exercise/README.md)
 
 # Lecture 1 - UML Introduction
 
