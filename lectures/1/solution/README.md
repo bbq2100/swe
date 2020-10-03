@@ -1,3 +1,3 @@
-[Lectures](../../README.md#school-lectures)
+[Lectures](../../../README.md#school-lectures)
 
 # Lecture 1 - UML Introduction | Solutions

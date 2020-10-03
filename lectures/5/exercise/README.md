@@ -1,3 +1,3 @@
-[Lectures](../../README.md#school-lectures)
+[Lectures](../../../README.md#school-lectures)
 
 # Lecture 5 -  Case Study - Implementing `TODO` | Exercises
