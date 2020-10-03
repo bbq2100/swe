@@ -1,0 +1,10 @@
+@startuml
+class User {
+  + getName()
+  - getAddress()
+  + setName()
+  - int weight
+  - int age
+  + string name
+}
+@enduml

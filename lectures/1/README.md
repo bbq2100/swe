@@ -76,7 +76,7 @@ In the above example the system context is `Restaurant` in which the actor `Food
 
 ![notation](https://sourcemaking.com/files/sm/images/uml/img_20.jpg)
 
-### Includes vs Extends
+### Include vs Extend Relationship
 
 ![diagram](https://forums.visual-paradigm.com/uploads/default/original/2X/b/b7c86c1c4b28af2f5a60616477fafe154bc04e33.png)
 
@@ -88,6 +88,68 @@ of another use case, in the example above: when opening a book, reading is inclu
 ## Class Diagram
 
 ![use_case](../../bin/dist/class.png)
+
+Class diagrams are representing
+
+- the hierarchical structure of a system  
+- the attributes and methods of classes and interfaces
+- the relationships between classes and interfaces
+
+### Notation
+
+![notation](https://www.tutorialspoint.com/uml/images/notation_class.jpg)
+
+### Attributes and Methods
+
+![relation](../../bin/dist/class_body.png)
+
+Methods have a `()` in their name. Attributes have a name and a type information, e.g. `int age`.
+
+UML Visibility Notation
+```
+- private member
++ public member
+# protected member
+```
+
+In the above example the weight and age attributes of a User are private, whereas the name is public.
+The methods getName() and setName() are public whereas getting the address is private.
+
+### Relationships and Associations
+
+![relation](../../bin/dist/relationship.png)
+
+Interpretation of the Diagram:
+
+A driver drives a car.
+
+A car has 4 wheels.
+
+A person owns a car.
+
+![association](../../bin/dist/association.png)
+
+Explanation: 0 - n students can be enrolled in a course.
+
+### Aggregations and Compositions
+
+![relation](../../bin/dist/aggregations.png)
+
+A aggregation expresses a "has"-relationship. In the above the pond has none or n swans.
+
+![relation](../../bin/dist/composition.png)
+
+A composition expresses a "owns"-relationship. A library owns books.
+
+### Inheritance
+
+![relation](../../bin/dist/inheritance.png)
+
+In order to model out generalizations, unfilled arrows are pointing from the implementation to the parent class which can in turn be 
+a class, an abstract class or an interface.
+
+In the above example we can see that ArrayList is fundamentally a Collection since it inherits from AbstractList which in turn
+inherits from List which extends the Collection interface.
 
 ## Sequence Diagram
 
