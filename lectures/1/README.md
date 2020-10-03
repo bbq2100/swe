@@ -35,6 +35,29 @@ If we try to model out every aspect then it is harder to focus on the _important
 
 #### Tools to draw UML Diagrams
 
+[Draw.io](http://www.draw.io) is a easy to use website which has many predefined symbols and icons
+![Draw.io](https://i.ytimg.com/vi/lAtCySGDD48/maxresdefault.jpg)
+
+If you prefer something declaratively then try [PlantUML](http://www.plantuml.com). All diagrams in this script
+were created with PlantUML. You can find the sources for the diagrams in the [diagrams](./../../bin/diagrams) directory.
+
+```
+@startuml
+left to right direction
+actor "Food Critic" as fc
+package Restaurant {
+  usecase "Eat Food" as UC1
+  usecase "Pay for Food" as UC2
+  usecase "Drink" as UC3
+}
+fc --> UC1
+fc --> UC2
+fc --> UC3
+@enduml
+```
+
+Declaration for the Use Case diagram below.
+
 ## Use Case Diagram
 
 ![use_case](../../bin/dist/use_case.png)
