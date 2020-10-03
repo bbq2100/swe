@@ -66,7 +66,7 @@ In the last lecture we will have a final look at the learned material and prepar
 
 Note that each lecture directory contains exercises and solutions for the exercises.
 
-For example, for lecture 1 you'll find the following resources under `./lectures/1`
+For example, for [lecture 1](https://github.com/qaismyname/softwareengineering-lecture/blob/master/lectures/1/README.md) you'll find the following resources under `./lectures/1`
 
 ```bash
 lectures/1
