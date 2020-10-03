@@ -1,3 +1,5 @@
+![CI](https://github.com/qaismyname/softwareengineering-lecture/workflows/CI/badge.svg)
+
 # Software Engineering Lecture
 
 ![logo](https://knda.de/wp-content/uploads/2019/Betriebe/FOM_2015_CMYK_MitWortmarke.png)
