@@ -36,7 +36,7 @@ After attending the lecture, students should be able to...
 
 [1 UML Introduction](./lectures/1/README.md)
 
-In the first lecture we are familiarizing ourself with common UML diagram types such as: use case, class, and sequence diagrams
+In the first lecture we are familiarizing with common UML diagram types such as: use case, class, and sequence diagrams
 
 [2 Software Design Principles](./lectures/2/README.md)
 

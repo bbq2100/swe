@@ -2,9 +2,56 @@
 
 # Lecture 1 - UML Introduction
 
+This lecture is about familiarizing with UML diagram types. Note that we will not study 
+all existing UML diagram types but only those which are commonly used in projects.
+
+## Unified Modeling Language (UML)
+
+UML is used in non-trivial projects for...
+
+- modeling
+- documentation
+- visualization
+- specification
+- discussion
+
+UML is not...
+
+- to describe the real world perfectly
+- complete in a sense that it captures all facets of the problem
+- a programming language
+- not specialised for one particular domain
+- a replacement for textual descriptions
+- agile method or project management approach
+
+#### Model vs Reality
+
+![map](./../../bin/static/map.png)
+
+![satellite](./../../bin/static/satellite.png)
+
+This example should demonstrate that a model is only there to capture the essential parts of an entity in the real world.
+If we try to model out every aspect then it is harder to focus on the _important_ parts of a model.
+
+#### Tools to draw UML Diagrams
+
 ## Use Case Diagram
 
 ![use_case](../../bin/dist/use_case.png)
+
+The purpose of the use case diagram is to model out:
+- all relevant actors inside a use case
+- the system context
+- the actions (i.e. use cases) an actor can do
+
+In the above example the system context is `Restaurant` in which the actor `Food critic` can
+- `Eat Food`
+- `Pay for Food`
+- `Drink`
+
+### Notation
+
+### Includes vs Extends
 
 ## Class Diagram
 
