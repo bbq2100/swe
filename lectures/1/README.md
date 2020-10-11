@@ -164,11 +164,12 @@ The UML defines the following properties of interaction diagrams in general:
 - Communication Partner
 - Message flow elements
  
-Note that there are several interaction diagrams existing in UML with different focuses and goals. Here we
-will look at Sequence diagrams since one would encounter them usually more often than others in typical projects.
+Note that there are multiple interaction diagrams existing in UML with different focuses and goals. Here we
+will look at Sequence diagrams since one would encounter them usually more often than other diagram types.
 
 A sequence diagram describes...
 
+- 
 
 ### Notation
 
