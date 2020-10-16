@@ -136,7 +136,7 @@ public class TaskBuilder {
 
 ![example](https://www.baeldung.com/wp-content/uploads/2018/11/updated_abstract_factory.jpg)
 
-```
+```java
 public interface Animal {
     String getAnimal();
     String makeSound();
@@ -144,7 +144,7 @@ public interface Animal {
 
 ```
 
-```
+```java
 public class Duck implements Animal {
  
     @Override
@@ -159,13 +159,13 @@ public class Duck implements Animal {
 }
 ```
 
-```
+```java
 public interface AbstractFactory<T> {
     T create(String animalType) ;
 }
 ```
 
-```
+```java
 public class AnimalFactory implements AbstractFactory<Animal> {
  
     @Override
@@ -182,7 +182,7 @@ public class AnimalFactory implements AbstractFactory<Animal> {
 }
 ```
 
-```
+```java
 public class FactoryProvider {
     public static AbstractFactory getFactory(String choice){
         
@@ -267,13 +267,13 @@ facade.stopEngine();
 
 ![example](https://www.baeldung.com/wp-content/uploads/2017/09/8poz64T.jpg)
 
-```
+```java
 public interface ChristmasTree {
     String decorate();
 }
 ```
 
-```
+```java
 public class ChristmasTreeImpl implements ChristmasTree {
  
     @Override
@@ -283,7 +283,7 @@ public class ChristmasTreeImpl implements ChristmasTree {
 }
 ```
 
-```
+```java
 public abstract class TreeDecorator implements ChristmasTree {
     private ChristmasTree tree;
     
@@ -295,7 +295,7 @@ public abstract class TreeDecorator implements ChristmasTree {
 }
 ```
 
-```
+```java
 public class BubbleLights extends TreeDecorator {
  
     public BubbleLights(ChristmasTree tree) {
@@ -312,7 +312,7 @@ public class BubbleLights extends TreeDecorator {
 }
 ```
 
-```
+```java
 @Test
 public void whenDecoratorsInjectedAtRuntime_thenConfigSuccess() {
     ChristmasTree tree1 = new Garland(new ChristmasTreeImpl());
@@ -389,14 +389,14 @@ assertEquals(observer.getNews(), "news");
 
 ![example](https://www.baeldung.com/wp-content/uploads/2017/09/Rpt_ER5p.jpg)
 
-```
+```java
 public interface Movable {
     // returns speed in MPH 
     double getSpeed();
 }
 ```
 
-```
+```java
 public class BugattiVeyron implements Movable {
  
     @Override
@@ -406,7 +406,7 @@ public class BugattiVeyron implements Movable {
 }
 ```
 
-```
+```java
 public interface MovableAdapter {
     // returns speed in KM/H 
     double getSpeed();
@@ -414,7 +414,7 @@ public interface MovableAdapter {
 ```
 
 
-```
+```java
 public class MovableAdapterImpl implements MovableAdapter {
     private Movable luxuryCars;
     
@@ -431,7 +431,7 @@ public class MovableAdapterImpl implements MovableAdapter {
 }
 ```
 
-```
+```java
 Movable bugattiVeyron = new BugattiVeyron();
     MovableAdapter bugattiVeyronAdapter = new MovableAdapterImpl(bugattiVeyron);
  
@@ -461,7 +461,7 @@ Movable bugattiVeyron = new BugattiVeyron();
 
 #### Single Responsibility
 
-```
+```java
 public class Book {
  
     private String name;
@@ -474,7 +474,7 @@ public class Book {
 
 ...
 
-```
+```java
 public class Book {
  
     private String name;
@@ -496,7 +496,7 @@ public class Book {
 
 ...
 
-```
+```java
 public class Book {
     //...
  
@@ -506,7 +506,7 @@ public class Book {
 }
 ```
 
-```
+```java
  
     // methods for outputting text
     void printTextToConsole(String text){
@@ -521,7 +521,7 @@ public class Book {
 
 #### Open/Closed
 
-```
+```java
 public class Guitar {
  
     private String make;
@@ -532,7 +532,7 @@ public class Guitar {
 }
 ```
 
-```
+```java
 public class SuperCoolGuitarWithFlames extends Guitar {
  
     private String flameColor;
@@ -546,7 +546,7 @@ public class SuperCoolGuitarWithFlames extends Guitar {
 
 "subclasses should be substitutable for their base classes" [Robert C. Martin](https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf)
 
-```
+```java
 public interface Car {
 
     void turnOnEngine();
@@ -554,7 +554,7 @@ public interface Car {
 }
 ```
 
-```
+```java
 public class MotorCar implements Car {
  
     private Engine engine;
@@ -573,7 +573,7 @@ public class MotorCar implements Car {
 }
 ```
 
-```
+```java
 public class ElectricCar implements Car {
  
     public void turnOnEngine() {
@@ -590,7 +590,7 @@ public class ElectricCar implements Car {
 
 ### Interface Segregation Principle
 
-```
+```java
 public interface Payment { 
     void initiatePayments();
     Object status();
@@ -598,7 +598,7 @@ public interface Payment {
 }
 ```
 
-```
+```java
 public class BankPayment implements Payment {
  
     @Override
@@ -620,7 +620,7 @@ public class BankPayment implements Payment {
 
 ....
 
-```
+```java
 public interface Payment {
  
     // original methods
@@ -630,7 +630,7 @@ public interface Payment {
 }
 ```
 
-```
+```java
 public class LoanPayment implements Payment {
  
     @Override
@@ -660,7 +660,7 @@ public class LoanPayment implements Payment {
 }
 ```
 
-```
+```java
 public class BankPayment implements Payment {
  
     @Override
@@ -693,27 +693,27 @@ public class BankPayment implements Payment {
 ![image](https://www.baeldung.com/wp-content/uploads/2020/07/interface_segregation_poor.png)
 
 
-```
+```java
 public interface Payment {
     Object status();
     List<Object> getPayments();
 }
 ```
 
-```
+```java
 public interface Bank extends Payment {
     void initiatePayments();
 }
 ```
 
-```
+```java
 public interface Loan extends Payment {
     void intiateLoanSettlement();
     void initiateRePayment();
 }
 ```
 
-```
+```java
 public class BankPayment implements Bank {
  
     @Override
@@ -733,7 +733,7 @@ public class BankPayment implements Bank {
 }
 ```
 
-```
+```java
 public class LoanPayment implements Loan {
  
     @Override
@@ -765,8 +765,6 @@ public class LoanPayment implements Loan {
 #### Dependency Inversion
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/9/96/Dependency_inversion.png)
-
-
 
 [Source](https://www.baeldung.com/solid-principles)
 
