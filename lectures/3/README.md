@@ -3,6 +3,12 @@
 
 # Lecture 3 - Software Design Patterns
 
+Contents:
+- Common Design Patterns
+- Clean Code Principles
+- Refactoring Strategies
+- Code Smells
+
 ![gangof4](https://brigittealice.files.wordpress.com/2011/06/110614_design_pattern_elements_of_reusable.jpg)
 
 In their classic book the authors define: *Creational*, *Structural* and *Behavioral* design patterns:
