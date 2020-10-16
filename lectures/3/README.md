@@ -447,11 +447,86 @@ Movable bugattiVeyron = new BugattiVeyron();
 ### KISS
 
 
+```java
+public String weekday1(int day) {
+    switch (day) {
+        case 1:
+            return "Monday";
+        case 2:
+            return "Tuesday";
+        case 3:
+            return "Wednesday";
+        case 4:
+            return "Thursday";
+        case 5:
+            return "Friday";
+        case 6:
+            return "Saturday";
+        case 7:
+            return "Sunday";
+        default:
+            throw new InvalidOperationException("day must be in range 1 to 7");
+    }
+}
+
+public String weekday2(int day) {
+    if ((day &lt; 1) || (day &gt; 7)) throw new InvalidOperationException("day must be in range 1 to 7");
+
+    string[] days = {
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+    };
+    return days[day - 1];
+}
+```
+
 ### DRY
+
+```java
+public class Calculator {
+ 
+	public int total(int a, int b) {
+		return a + b;
+	}
+ 
+	public double average(int a, int b) {
+		int sum = a + b;
+ 
+		return sum / 2;
+	}
+}
+```
+
+```java
+public class Calculator {
+
+	public int total(int a, int b) {
+		int sum = a + b;
+		System.out.println("Total=" + sum);
+		
+		return sum;
+	}
+
+	public double average(int a, int b) {
+		int sum = total(a, b);
+		
+		return sum / 2;
+	}
+}
+```
 
 ### YAGNI
 
-### SOLID
+![fowler](https://www.martinfowler.com/bliki/images/yagni/sketch.png)
+
+[Source](https://www.martinfowler.com/bliki/Yagni.html)
+
+### SOLID Principles
 
 1. Single Responsibility
 2. Open/Closed
@@ -831,6 +906,7 @@ foo.doStuff();
 ```
 
 [Source](https://stackoverflow.com/questions/29778275/dependency-inversion-principle-as-it-applies-to-java)
+
 [Source](https://www.baeldung.com/solid-principles)
 
 ## Refactoring Strategies
@@ -1010,4 +1086,5 @@ USER_ADMIN_ROLE = 1
 ```
 
 [Source](https://www.javacodegeeks.com/2019/09/identifying-code-smells-in-java.html)
+
 [Source](https://refactoring.guru/smells/primitive-obsession)
