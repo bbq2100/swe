@@ -134,7 +134,7 @@ public class TaskBuilder {
 
 ![facade](https://www.baeldung.com/wp-content/uploads/2018/04/facade-class-diagram.png)
 
-```
+```java
 airFlowController.takeAir()
 fuelInjector.on()
 fuelInjector.inject()
@@ -144,7 +144,7 @@ coolingController.run()
 catalyticConverter.on()
 ```
 
-```
+```java
 fuelInjector.off()
 catalyticConverter.off()
 coolingController.cool(MAX_ALLOWED_TEMP)
@@ -152,7 +152,7 @@ coolingController.stop()
 airFlowController.off()
 ```
 
-```
+```java
 public class CarEngineFacade {
     private static int DEFAULT_COOLING_TEMP = 90;
     private static int MAX_ALLOWED_TEMP = 50;
@@ -183,7 +183,7 @@ public class CarEngineFacade {
 
 ```
 
-```
+```java
 facade.startEngine();
 // ...
 facade.stopEngine();
@@ -195,7 +195,7 @@ facade.stopEngine();
 
 ![observer](https://miro.medium.com/1*W0B2TW5Ekh8-bULK5MIvdA.jpeg)
 
-```
+```java
 public class NewsAgency {
     private String news;
     private List<Channel> channels = new ArrayList<>();
@@ -217,7 +217,7 @@ public class NewsAgency {
 }
 ```
 
-```
+```java
 public class NewsChannel implements Channel {
     private String news;
  
@@ -228,13 +228,13 @@ public class NewsChannel implements Channel {
 }
 ```
 
-```
+```java
 public interface Channel {
     public void update(Object o);
 }
 ```
 
-```
+```java
 NewsAgency observable = new NewsAgency();
 NewsChannel observer = new NewsChannel();
  
@@ -265,7 +265,7 @@ assertEquals(observer.getNews(), "news");
 
 ### Extract Method
 
-```
+```java
 void printOwing() {
   printBanner();
 
@@ -275,7 +275,7 @@ void printOwing() {
 }
 ```
 
-```
+```java
 void printOwing() {
   printBanner();
   printDetails(getOutstanding());
@@ -289,7 +289,7 @@ void printDetails(double outstanding) {
 
 ### Extract Variable
 
-```
+```java
 void renderBanner() {
   if ((platform.toUpperCase().indexOf("MAC") > -1) &&
        (browser.toUpperCase().indexOf("IE") > -1) &&
@@ -300,7 +300,7 @@ void renderBanner() {
 }
 ```
 
-```
+```java
 void renderBanner() {
   final boolean isMacOs = platform.toUpperCase().indexOf("MAC") > -1;
   final boolean isIE = browser.toUpperCase().indexOf("IE") > -1;
@@ -320,14 +320,14 @@ void renderBanner() {
 
 ### Long Parameter List
 
-```
+```java
 public void doSomething(String name, int id, String deptCode, String regNumber) {
   
     ...
 }
 ```
 
-```
+```java
 public class Student {
   
     private int id;
@@ -344,7 +344,7 @@ public void doSomething(Student student) {
 
 ### Error Hiding
 
-```
+```java
 try {
   throw new Exception();
 } catch {
@@ -354,13 +354,13 @@ try {
 
 ### Magic Numbers
 
-```
+```java
 for i from 1 to 52
    j := i + randomInt(53 - i) - 1
    a.swapEntries(i, j)
 ```
 
-```
+```javascript
 constant int deckSize := 52
 for i from 1 to deckSize
     j := i + randomInt(deckSize + 1 - i) - 1
@@ -369,7 +369,7 @@ for i from 1 to deckSize
 
 ### Spaghetti code
 
-```
+```shell
 i=0
 i=i+1
 PRINT i; "squared=";i*i
@@ -379,7 +379,7 @@ PRINT "Program Completed."
 END
 ```
 
-```
+```shell
 FOR i=1 TO 100
      PRINT i;"squared=";i*i
  NEXT i
