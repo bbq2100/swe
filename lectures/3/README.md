@@ -15,7 +15,7 @@ In their classic book the authors define: *Creational*, *Structural* and *Behavi
 
 In the following few selected patterns (for each category of pattern type) are explained in detail
 
-### Creational Pattern:  Builder Pattern
+### Creational Pattern: Builder Pattern
 
 ![builder](https://refactoring.guru/images/patterns/diagrams/builder/problem1.png)
 
@@ -130,6 +130,74 @@ public class TaskBuilder {
 
 [Source](https://www.vogella.com/tutorials/DesignPatternBuilder/article.html)
 
+### Creational Pattern: Abstract Factory Pattern
+
+![factory](https://refactoring.guru/images/patterns/content/abstract-factory/abstract-factory-en-3x.png)
+
+![example](https://www.baeldung.com/wp-content/uploads/2018/11/updated_abstract_factory.jpg)
+
+```
+public interface Animal {
+    String getAnimal();
+    String makeSound();
+}
+
+```
+
+```
+public class Duck implements Animal {
+ 
+    @Override
+    public String getAnimal() {
+        return "Duck";
+    }
+ 
+    @Override
+    public String makeSound() {
+        return "Squeks";
+    }
+}
+```
+
+```
+public interface AbstractFactory<T> {
+    T create(String animalType) ;
+}
+```
+
+```
+public class AnimalFactory implements AbstractFactory<Animal> {
+ 
+    @Override
+    public Animal create(String animalType) {
+        if ("Dog".equalsIgnoreCase(animalType)) {
+            return new Dog();
+        } else if ("Duck".equalsIgnoreCase(animalType)) {
+            return new Duck();
+        }
+ 
+        return null;
+    }
+ 
+}
+```
+
+```
+public class FactoryProvider {
+    public static AbstractFactory getFactory(String choice){
+        
+        if("Animal".equalsIgnoreCase(choice)){
+            return new AnimalFactory();
+        }
+        else if("Color".equalsIgnoreCase(choice)){
+            return new ColorFactory();
+        }
+        
+        return null;
+    }
+}
+```
+
 ### Structural Pattern: Facade Pattern
 
 ![facade](https://www.baeldung.com/wp-content/uploads/2018/04/facade-class-diagram.png)
@@ -191,6 +259,73 @@ facade.stopEngine();
 
 [Source](https://www.baeldung.com/java-facade-pattern)
 
+### Structural Pattern: Decorator Pattern
+
+![image](https://refactoring.guru/images/patterns/content/decorator/decorator-3x.png)
+
+![example](https://www.baeldung.com/wp-content/uploads/2017/09/8poz64T.jpg)
+
+```
+public interface ChristmasTree {
+    String decorate();
+}
+```
+
+```
+public class ChristmasTreeImpl implements ChristmasTree {
+ 
+    @Override
+    public String decorate() {
+        return "Christmas tree";
+    }
+}
+```
+
+```
+public abstract class TreeDecorator implements ChristmasTree {
+    private ChristmasTree tree;
+    
+    // standard constructors
+    @Override
+    public String decorate() {
+        return tree.decorate();
+    }
+}
+```
+
+```
+public class BubbleLights extends TreeDecorator {
+ 
+    public BubbleLights(ChristmasTree tree) {
+        super(tree);
+    }
+    
+    public String decorate() {
+        return super.decorate() + decorateWithBubbleLights();
+    }
+    
+    private String decorateWithBubbleLights() {
+        return " with Bubble Lights";
+    }
+}
+```
+
+```
+@Test
+public void whenDecoratorsInjectedAtRuntime_thenConfigSuccess() {
+    ChristmasTree tree1 = new Garland(new ChristmasTreeImpl());
+    assertEquals(tree1.decorate(), 
+      "Christmas tree with Garland");
+     
+    ChristmasTree tree2 = new BubbleLights(
+      new Garland(new Garland(new ChristmasTreeImpl())));
+    assertEquals(tree2.decorate(), 
+      "Christmas tree with Garland with Garland with Bubble Lights");
+}
+```
+
+[Source](https://www.baeldung.com/java-decorator-pattern)
+
 ### Behavioral Pattern: Observer Pattern
 
 ![observer](https://miro.medium.com/1*W0B2TW5Ekh8-bULK5MIvdA.jpeg)
@@ -246,6 +381,63 @@ assertEquals(observer.getNews(), "news");
 
 [Source](https://www.baeldung.com/java-observer-pattern)
 
+### Behavioral Pattern: Adapter Pattern
+
+![adapter](https://fmoralesdev.com/wp-content/uploads/2019/06/Adapter1.jpeg)
+
+![example](https://www.baeldung.com/wp-content/uploads/2017/09/Rpt_ER5p.jpg)
+
+```
+public interface Movable {
+    // returns speed in MPH 
+    double getSpeed();
+}
+```
+
+```
+public class BugattiVeyron implements Movable {
+ 
+    @Override
+    public double getSpeed() {
+        return 268;
+    }
+}
+```
+
+```
+public interface MovableAdapter {
+    // returns speed in KM/H 
+    double getSpeed();
+}
+```
+
+
+```
+public class MovableAdapterImpl implements MovableAdapter {
+    private Movable luxuryCars;
+    
+    // standard constructors
+ 
+    @Override
+    public double getSpeed() {
+        return convertMPHtoKMPH(luxuryCars.getSpeed());
+    }
+    
+    private double convertMPHtoKMPH(double mph) {
+        return mph * 1.60934;
+    }
+}
+```
+
+```
+Movable bugattiVeyron = new BugattiVeyron();
+    MovableAdapter bugattiVeyronAdapter = new MovableAdapterImpl(bugattiVeyron);
+ 
+    assertEquals(bugattiVeyronAdapter.getSpeed(), 431.30312, 0.00001);
+```
+
+[Source](https://www.baeldung.com/java-adapter-pattern)
+
 ## Clean Code Principles
 
 ![clean_code](https://images-na.ssl-images-amazon.com/images/I/41-+g1a2Y1L.jpg)
@@ -261,6 +453,8 @@ assertEquals(observer.getNews(), "news");
 ### Principle of Least Surprise
 
 ## Refactoring Strategies
+
+![refactoring](https://images-na.ssl-images-amazon.com/images/I/51k+BvsOl2L.jpg)
 
 ### Extract Method
 
@@ -312,8 +506,6 @@ void renderBanner() {
 ```
 
 [Source](https://refactoring.guru/extract-method)
-
-![refactoring](https://images-na.ssl-images-amazon.com/images/I/51k+BvsOl2L.jpg)
 
 ## Anti-Patterns / Code Smells
 
