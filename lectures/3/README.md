@@ -15,7 +15,7 @@ In their classic book the authors define: *Creational*, *Structural* and *Behavi
 
 In the following few selected patterns (for each category of pattern type) are explained in detail
 
-### Builder Pattern
+### Creational Pattern:  Builder Pattern
 
 ![builder](https://refactoring.guru/images/patterns/diagrams/builder/problem1.png)
 
@@ -130,9 +130,9 @@ public class TaskBuilder {
 
 [Ref](https://www.vogella.com/tutorials/DesignPatternBuilder/article.html)
 
-### Facade Pattern
+### Structural Pattern: Facade Pattern
 
-### Observer Pattern
+### Behavioral Pattern: Observer Pattern
 
 ## Clean Code Principles
 
