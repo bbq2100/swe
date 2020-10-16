@@ -248,6 +248,8 @@ assertEquals(observer.getNews(), "news");
 
 ## Clean Code Principles
 
+![clean_code](https://images-na.ssl-images-amazon.com/images/I/41-+g1a2Y1L.jpg)
+
 ### KISS
 
 ### DRY
@@ -257,9 +259,6 @@ assertEquals(observer.getNews(), "news");
 ### SOLID
 
 ### Principle of Least Surprise
-
-
-![clean_code](https://images-na.ssl-images-amazon.com/images/I/41-+g1a2Y1L.jpg)
 
 ## Refactoring Strategies
 
