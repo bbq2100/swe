@@ -198,6 +198,8 @@ public class FactoryProvider {
 }
 ```
 
+[Source](https://www.baeldung.com/java-abstract-factory-pattern)
+
 ### Structural Pattern: Facade Pattern
 
 ![facade](https://www.baeldung.com/wp-content/uploads/2018/04/facade-class-diagram.png)
@@ -444,13 +446,329 @@ Movable bugattiVeyron = new BugattiVeyron();
 
 ### KISS
 
+
 ### DRY
 
 ### YAGNI
 
 ### SOLID
 
-### Principle of Least Surprise
+1. Single Responsibility
+2. Open/Closed
+3. Liskov Substitution
+4. Interface Segregation
+5. Dependency Inversion
+
+#### Single Responsibility
+
+```
+public class Book {
+ 
+    private String name;
+    private String author;
+    private String text;
+ 
+    //constructor, getters and setters
+}
+```
+
+...
+
+```
+public class Book {
+ 
+    private String name;
+    private String author;
+    private String text;
+ 
+    //constructor, getters and setters
+ 
+    // methods that directly relate to the book properties
+    public String replaceWordInText(String word){
+        return text.replaceAll(word, text);
+    }
+ 
+    public boolean isWordInText(String word){
+        return text.contains(word);
+    }
+}
+```
+
+...
+
+```
+public class Book {
+    //...
+ 
+    void printTextToConsole(){
+        // our code for formatting and printing the text
+    }
+}
+```
+
+```
+ 
+    // methods for outputting text
+    void printTextToConsole(String text){
+        //our code for formatting and printing the text
+    }
+ 
+    void printTextToAnotherMedium(String text){
+        // code for writing to any other location..
+    }
+}
+```
+
+#### Open/Closed
+
+```
+public class Guitar {
+ 
+    private String make;
+    private String model;
+    private int volume;
+ 
+    //Constructors, getters & setters
+}
+```
+
+```
+public class SuperCoolGuitarWithFlames extends Guitar {
+ 
+    private String flameColor;
+ 
+    //constructor, getters + setters
+}
+
+```
+
+#### Liskov Substitution
+
+"subclasses should be substitutable for their base classes" [Robert C. Martin](https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf)
+
+```
+public interface Car {
+
+    void turnOnEngine();
+    void accelerate();
+}
+```
+
+```
+public class MotorCar implements Car {
+ 
+    private Engine engine;
+ 
+    //Constructors, getters + setters
+ 
+    public void turnOnEngine() {
+        //turn on the engine!
+        engine.on();
+    }
+ 
+    public void accelerate() {
+        //move forward!
+        engine.powerOn(1000);
+    }
+}
+```
+
+```
+public class ElectricCar implements Car {
+ 
+    public void turnOnEngine() {
+        throw new AssertionError("I don't have an engine!");
+    }
+ 
+    public void accelerate() {
+        //this acceleration is crazy!
+    }
+}
+```
+
+#### Interface Segregation
+
+### Interface Segregation Principle
+
+```
+public interface Payment { 
+    void initiatePayments();
+    Object status();
+    List<Object> getPayments();
+}
+```
+
+```
+public class BankPayment implements Payment {
+ 
+    @Override
+    public void initiatePayments() {
+       // ...
+    }
+ 
+    @Override
+    public Object status() {
+        // ...
+    }
+ 
+    @Override
+    public List<Object> getPayments() {
+        // ...
+    }
+}
+```
+
+....
+
+```
+public interface Payment {
+ 
+    // original methods
+    ...
+    void intiateLoanSettlement();
+    void initiateRePayment();
+}
+```
+
+```
+public class LoanPayment implements Payment {
+ 
+    @Override
+    public void initiatePayments() {
+        throw new UnsupportedOperationException("This is not a bank payment");
+    }
+ 
+    @Override
+    public Object status() {
+        // ...
+    }
+ 
+    @Override
+    public List<Object> getPayments() {
+        // ...
+    }
+ 
+    @Override
+    public void intiateLoanSettlement() {
+        // ...
+    }
+ 
+    @Override
+    public void initiateRePayment() {
+        // ...
+    }
+}
+```
+
+```
+public class BankPayment implements Payment {
+ 
+    @Override
+    public void initiatePayments() {
+        // ...
+    }
+ 
+    @Override
+    public Object status() {
+        // ...
+    }
+ 
+    @Override
+    public List<Object> getPayments() {
+        // ...
+    }
+ 
+    @Override
+    public void intiateLoanSettlement() {
+        throw new UnsupportedOperationException("This is not a loan payment");
+    }
+ 
+    @Override
+    public void initiateRePayment() {
+        throw new UnsupportedOperationException("This is not a loan payment");
+    }
+}
+```
+
+![image](https://www.baeldung.com/wp-content/uploads/2020/07/interface_segregation_poor.png)
+
+
+```
+public interface Payment {
+    Object status();
+    List<Object> getPayments();
+}
+```
+
+```
+public interface Bank extends Payment {
+    void initiatePayments();
+}
+```
+
+```
+public interface Loan extends Payment {
+    void intiateLoanSettlement();
+    void initiateRePayment();
+}
+```
+
+```
+public class BankPayment implements Bank {
+ 
+    @Override
+    public void initiatePayments() {
+        // ...
+    }
+ 
+    @Override
+    public Object status() {
+        // ...
+    }
+ 
+    @Override
+    public List<Object> getPayments() {
+        // ...
+    }
+}
+```
+
+```
+public class LoanPayment implements Loan {
+ 
+    @Override
+    public void intiateLoanSettlement() {
+        // ...
+    }
+ 
+    @Override
+    public void initiateRePayment() {
+        // ...
+    }
+ 
+    @Override
+    public Object status() {
+        // ...
+    }
+ 
+    @Override
+    public List<Object> getPayments() {
+        // ...
+    }
+}
+```
+
+![image](https://www.baeldung.com/wp-content/uploads/2020/07/interface_segregation_fixed.png)
+
+[Source](https://www.baeldung.com/java-interface-segregation)
+
+#### Dependency Inversion
+
+![image](https://upload.wikimedia.org/wikipedia/commons/9/96/Dependency_inversion.png)
+
+
+
+[Source](https://www.baeldung.com/solid-principles)
 
 ## Refactoring Strategies
 
