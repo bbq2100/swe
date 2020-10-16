@@ -3,6 +3,14 @@
 
 # Lecture 1 - UML Introduction
 
+Contents:
+
+- Unified Modeling Language (UML)
+- Use Case Diagram
+- Class Diagram
+- Sequence Diagram
+- State Diagram
+
 This lecture is about familiarizing with UML diagram types. Note that we will not study 
 all existing UML diagram types but only those which are commonly used in projects.
 
