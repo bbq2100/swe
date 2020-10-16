@@ -128,7 +128,7 @@ public class TaskBuilder {
         System.out.println(task);
 ```
 
-[Ref](https://www.vogella.com/tutorials/DesignPatternBuilder/article.html)
+[Source](https://www.vogella.com/tutorials/DesignPatternBuilder/article.html)
 
 ### Structural Pattern: Facade Pattern
 
