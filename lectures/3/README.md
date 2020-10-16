@@ -248,10 +248,143 @@ assertEquals(observer.getNews(), "news");
 
 ## Clean Code Principles
 
+### KISS
+
+### DRY
+
+### YAGNI
+
+### SOLID
+
+### Principle of Least Surprise
+
+
 ![clean_code](https://images-na.ssl-images-amazon.com/images/I/41-+g1a2Y1L.jpg)
 
 ## Refactoring Strategies
 
+### Extract Method
+
+```
+void printOwing() {
+  printBanner();
+
+  // Print details.
+  System.out.println("name: " + name);
+  System.out.println("amount: " + getOutstanding());
+}
+```
+
+```
+void printOwing() {
+  printBanner();
+  printDetails(getOutstanding());
+}
+
+void printDetails(double outstanding) {
+  System.out.println("name: " + name);
+  System.out.println("amount: " + outstanding);
+}
+```
+
+### Extract Variable
+
+```
+void renderBanner() {
+  if ((platform.toUpperCase().indexOf("MAC") > -1) &&
+       (browser.toUpperCase().indexOf("IE") > -1) &&
+        wasInitialized() && resize > 0 )
+  {
+    // do something
+  }
+}
+```
+
+```
+void renderBanner() {
+  final boolean isMacOs = platform.toUpperCase().indexOf("MAC") > -1;
+  final boolean isIE = browser.toUpperCase().indexOf("IE") > -1;
+  final boolean wasResized = resize > 0;
+
+  if (isMacOs && isIE && wasInitialized() && wasResized) {
+    // do something
+  }
+}
+```
+
+[Source](https://refactoring.guru/extract-method)
+
 ![refactoring](https://images-na.ssl-images-amazon.com/images/I/51k+BvsOl2L.jpg)
 
-## Anti-Patterns
+## Anti-Patterns / Code Smells
+
+### Long Parameter List
+
+```
+public void doSomething(String name, int id, String deptCode, String regNumber) {
+  
+    ...
+}
+```
+
+```
+public class Student {
+  
+    private int id;
+    private String name;
+  
+    //constructor, getters and setters
+  
+}
+
+public void doSomething(Student student) {
+    ...
+}
+```
+
+### Error Hiding
+
+```
+try {
+  throw new Exception();
+} catch {
+  // do nothing
+}
+```
+
+### Magic Numbers
+
+```
+for i from 1 to 52
+   j := i + randomInt(53 - i) - 1
+   a.swapEntries(i, j)
+```
+
+```
+constant int deckSize := 52
+for i from 1 to deckSize
+    j := i + randomInt(deckSize + 1 - i) - 1
+    a.swapEntries(i, j)
+```
+
+### Spaghetti code
+
+```
+i=0
+i=i+1
+PRINT i; "squared=";i*i
+IF i>=100 THEN GOTO 6
+GOTO 2
+PRINT "Program Completed."
+END
+```
+
+```
+FOR i=1 TO 100
+     PRINT i;"squared=";i*i
+ NEXT i
+ PRINT "Program Completed."
+ END
+```
+
+[Source](https://www.javacodegeeks.com/2019/09/identifying-code-smells-in-java.html)
