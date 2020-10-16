@@ -1007,7 +1007,7 @@ int discount(int inputVal, int quantity) {
 
 [Source](https://refactoring.guru/extract-method)
 
-## Anti-Patterns / Code Smells
+## Code Smells
 
 ### Long Parameter List
 
