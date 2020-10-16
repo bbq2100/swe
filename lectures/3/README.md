@@ -189,9 +189,62 @@ facade.startEngine();
 facade.stopEngine();
 ```
 
-![Source](https://www.baeldung.com/java-facade-pattern)
+[Source](https://www.baeldung.com/java-facade-pattern)
 
 ### Behavioral Pattern: Observer Pattern
+
+![observer](https://miro.medium.com/1*W0B2TW5Ekh8-bULK5MIvdA.jpeg)
+
+```
+public class NewsAgency {
+    private String news;
+    private List<Channel> channels = new ArrayList<>();
+ 
+    public void addObserver(Channel channel) {
+        this.channels.add(channel);
+    }
+ 
+    public void removeObserver(Channel channel) {
+        this.channels.remove(channel);
+    }
+ 
+    public void setNews(String news) {
+        this.news = news;
+        for (Channel channel : this.channels) {
+            channel.update(this.news);
+        }
+    }
+}
+```
+
+```
+public class NewsChannel implements Channel {
+    private String news;
+ 
+    @Override
+    public void update(Object news) {
+        this.setNews((String) news);
+    } 
+}
+```
+
+```
+public interface Channel {
+    public void update(Object o);
+}
+```
+
+```
+NewsAgency observable = new NewsAgency();
+NewsChannel observer = new NewsChannel();
+ 
+observable.addObserver(observer);
+observable.setNews("news");
+assertEquals(observer.getNews(), "news");
+
+```
+
+[Source](https://www.baeldung.com/java-observer-pattern)
 
 ## Clean Code Principles
 
