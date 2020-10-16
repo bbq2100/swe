@@ -38,7 +38,7 @@ After attending the lecture, students should be able to...
 
 In the first lecture we are familiarizing with common UML diagram types such as: use case, class, state, and sequence diagrams
 
-[2 Software Design Principles](./lectures/2/README.md)
+[2 Software Architecture](./lectures/2/README.md)
 
 The second lecture is about common architecture patterns such as Model View Control (MVC), SOLID principles, and modularisation
 
