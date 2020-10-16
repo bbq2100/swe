@@ -588,8 +588,6 @@ public class ElectricCar implements Car {
 
 #### Interface Segregation
 
-### Interface Segregation Principle
-
 ```java
 public interface Payment { 
     void initiatePayments();
@@ -766,6 +764,73 @@ public class LoanPayment implements Loan {
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/9/96/Dependency_inversion.png)
 
+```java
+public class Logger {
+    public void logInformation(String logInfo) {
+        System.out.println(logInfo);
+    }
+}
+
+// "High level module" Policy equivalent.
+public class Foo {
+    // direct dependency of a low level module.
+    private Logger logger = new Logger();
+
+    public void doStuff() {
+        logger.logInformation("Something important.");
+    }
+}
+```
+
+```java
+public interface ILogger {
+    void logInformation(String logInfo);
+}
+
+public class Logger implements ILogger {
+    @Override
+    public void logInformation(string logInfo) {
+        System.out.println(logInfo);
+    }
+}
+
+public class Foo {
+    private ILogger logger;
+    public void setLoggerImpl(ILogger loggerImpl) {
+        this.logger = loggerImpl;
+    }
+
+    public void doStuff() {
+        logger.logInformation("Something important.");
+    }
+}
+```
+
+```java
+Foo foo = new Foo();
+ILogger logger = new Logger();
+foo.setLoggerImpl(logger);
+foo.doStuff();
+```
+
+```java
+public class LoggerToDb implements ILogger {
+    @Override
+    public void logInformation(string logInfo) {
+        DbContext databaseContext = new DbContext();
+        databaseContext.insertLog(logInfo);
+    }
+}
+```
+
+```java
+Foo foo = new Foo();
+ILogger logger = new LoggerToDb();
+foo.setLoggerImpl(logger);
+foo.doStuff();
+```
+
+[Source](https://stackoverflow.com/questions/29778275/dependency-inversion-principle-as-it-applies-to-java)
 [Source](https://www.baeldung.com/solid-principles)
 
 ## Refactoring Strategies
