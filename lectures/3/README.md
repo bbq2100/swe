@@ -886,6 +886,49 @@ void renderBanner() {
 }
 ```
 
+### Inline Method
+```java
+class PizzaDelivery {
+  // ...
+  int getRating() {
+    return moreThanFiveLateDeliveries() ? 2 : 1;
+  }
+  boolean moreThanFiveLateDeliveries() {
+    return numberOfLateDeliveries > 5;
+  }
+}
+```
+
+```java
+class PizzaDelivery {
+  // ...
+  int getRating() {
+    return numberOfLateDeliveries > 5 ? 2 : 1;
+  }
+}
+```
+
+### Remove Assignments to Parameters
+
+```java
+int discount(int inputVal, int quantity) {
+  if (inputVal > 50) {
+    inputVal -= 2;
+  }
+  // ...
+}
+```
+
+```java
+int discount(int inputVal, int quantity) {
+  int result = inputVal;
+  if (inputVal > 50) {
+    result -= 2;
+  }
+  // ...
+}
+```
+
 [Source](https://refactoring.guru/extract-method)
 
 ## Anti-Patterns / Code Smells
@@ -959,4 +1002,12 @@ FOR i=1 TO 100
  END
 ```
 
+
+### Primitive Obsession
+
+```java
+USER_ADMIN_ROLE = 1
+```
+
 [Source](https://www.javacodegeeks.com/2019/09/identifying-code-smells-in-java.html)
+[Source](https://refactoring.guru/smells/primitive-obsession)
