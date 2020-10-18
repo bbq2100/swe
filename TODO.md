@@ -1,0 +1,1 @@
+- update design pattern examples with more realish ones
