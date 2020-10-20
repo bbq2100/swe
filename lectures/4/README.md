@@ -7,11 +7,23 @@ Continuous Integration             |  Continuous Delivery
 :-------------------------:|:-------------------------:
 ![ci](https://images-na.ssl-images-amazon.com/images/I/51lkZKjkpfL._SX376_BO1,204,203,200_.jpg) | ![cd](https://images-na.ssl-images-amazon.com/images/I/51NbiDn81NL._SX385_BO1,204,203,200_.jpg)
 
-### Simple [Concourse](https://github.com/concourse/concourse) Pipeline
+## Goals and Common Practices
+
+### CI vs CD
+
+### CD vs Continuous Deployment
+
+## [Concourse](https://github.com/concourse/concourse)
+
+TODO
+
+#### Simple Concourse Pipeline
+
+![sample](https://raw.githubusercontent.com/lsilvapvt/misc-support-files/master/docs/images/simple-gated-pipeline.gif)
 
 https://github.com/vmwarepivotallabs/concourse-pipeline-samples/tree/master/concourse-pipeline-patterns/gated-pipelines/01-simple
 
-![sample](https://raw.githubusercontent.com/lsilvapvt/misc-support-files/master/docs/images/simple-gated-pipeline.gif)
+This sample pipeline TODO
 
 ```yml
 resources:
