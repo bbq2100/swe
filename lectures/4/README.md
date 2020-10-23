@@ -105,8 +105,6 @@ Check the official [Git website](https://git-scm.com/) out.
 
 ![workflow](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Continuous_Delivery_process_diagram.svg/731px-Continuous_Delivery_process_diagram.svg.png)
 
-[https://en.wikipedia.org/wiki/Continuous_delivery](https://en.wikipedia.org/wiki/Continuous_delivery)
-
 ### Summary: Goals and Common Practices
 
 - Maintain a code repository
@@ -115,7 +113,7 @@ Check the official [Git website](https://git-scm.com/) out.
 - Every commit (to baseline) should be built
 - Keep the build fast
 
-### Continuous Inspection
+## Continuous Inspection
 
 Goals and ideas:
 
