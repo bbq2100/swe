@@ -7,6 +7,10 @@ Continuous Integration             |  Continuous Delivery
 :-------------------------:|:-------------------------:
 ![ci](https://images-na.ssl-images-amazon.com/images/I/51lkZKjkpfL._SX376_BO1,204,203,200_.jpg) | ![cd](https://images-na.ssl-images-amazon.com/images/I/51NbiDn81NL._SX385_BO1,204,203,200_.jpg)
 
+## Discussion
+- How are software releases managed in your respective company?
+- What techniques and practices are you already familiar with?
+
 ## Goals and Common Practices
 
 ### CI vs CD
@@ -90,3 +94,5 @@ jobs:
         - |
           echo "Output of your other tasks."
 ```
+
+## End-To-End Example
