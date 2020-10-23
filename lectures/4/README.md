@@ -53,7 +53,7 @@ Check the official [Maven website](http://maven.apache.org/) out.
 
 - Discussion
 
-![git](https://www.dotnetpro.de/img/9/6/7/0/0/8/git-Logo_w1200_h629.jpg)
+![git](https://i.morioh.com/2019/11/11/1f265e2d4c43.jpg)
 
 Check the official [Git website](https://git-scm.com/) out.
 
