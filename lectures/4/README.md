@@ -45,9 +45,17 @@ CD takes the idea of CI a bit further: Every change which is worth to be release
 
 - Discussion
 
+![mvn](https://miro.medium.com/max/750/1*xsrKVt69q3JsZzLD-ldekQ.jpeg)
+
+Check the official [Maven website](http://maven.apache.org/) out.
+
 #### What is a Source Code Management System (SCM)?
 
 - Discussion
+
+![git](https://www.dotnetpro.de/img/9/6/7/0/0/8/git-Logo_w1200_h629.jpg)
+
+Check the official [Git website](https://git-scm.com/) out.
 
 ### Ideas
 
@@ -66,21 +74,38 @@ CD takes the idea of CI a bit further: Every change which is worth to be release
 - Enable better project visibility
 - Establish greater confidence in the software product from the development team
 
-### CI Workflow
+### Anatomy of CI Pipeline
 
 ![ci](https://docs.microsoft.com/de-de/azure/cognitive-services/luis/media/luis-concept-devops-automation/luis-automation.png)
 
 - Compile code in CI
 - Run tests in CI
 - Deploy an artifact from CI
+
+## Continuous Delivery
+
+![cd](https://user-images.githubusercontent.com/3501767/97043393-af833a00-1572-11eb-9a72-13eb534ea8e0.png)
+
+### Deployment Anti-Patterns
+
+- Deploying Software Manually
+- Deploying to a Production-like Environment Only after Development Is Complete
+- Manual Configuration Management of Production Environments
+
+### Principles
+
+- Create a Repeatable, Reliable Process for Releasing Software
+- Automate Almost Everything
+- Keep Everything in Version Control
+- If It Hurts, Do It More Frequently, and Bring the Pain Forward
+- Everybody Is Responsible for the Delivery Process
+- Continuous Improvement
  
-### CD Workflow
+### Anatomy of CD Pipeline
 
 ![workflow](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Continuous_Delivery_process_diagram.svg/731px-Continuous_Delivery_process_diagram.svg.png)
 
 [https://en.wikipedia.org/wiki/Continuous_delivery](https://en.wikipedia.org/wiki/Continuous_delivery)
-
-### CI vs CD
 
 ### Summary: Goals and Common Practices
 
@@ -105,9 +130,12 @@ Generated from automated testing and CI (such as metrics for code coverage, code
 ![sonar](https://miro.medium.com/max/3964/1*z-kdUUZ8_ca6h7HFND-y4Q.png)
 [https://www.sonarqube.org/](https://www.sonarqube.org/)
 
+[Live Example](https://sonarcloud.io/dashboard?id=fiunes_elasticsearch)
+
 ## [Concourse](https://github.com/concourse/concourse)
 
-TODO
+_Concourse is an automation system written in Go. It is most commonly used for CI/CD, and is built to scale to any kind of automation pipeline, from simple to complex._
+[https://github.com/concourse/concourse](https://github.com/concourse/concourse)
 
 #### Simple Concourse Pipeline
 
