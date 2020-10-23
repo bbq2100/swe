@@ -3,19 +3,61 @@
 
 # Lecture 4 - Integrating Software Systems
 
-Continuous Integration             |  Continuous Delivery
-:-------------------------:|:-------------------------:
-![ci](https://images-na.ssl-images-amazon.com/images/I/51lkZKjkpfL._SX376_BO1,204,203,200_.jpg) | ![cd](https://images-na.ssl-images-amazon.com/images/I/51NbiDn81NL._SX385_BO1,204,203,200_.jpg)
-
 ## Discussion
 - How are software releases managed in your respective company?
 - What techniques and practices are you already familiar with?
 
-## Goals and Common Practices
+The go-to books on the subject of integrating modern software systems are Continuous Integration and Continuous Delivery which also
+coined the term CI/CD.
+
+In [Extreme Programming](https://en.wikipedia.org/wiki/Extreme_programming) from Kent Beck, another classic literature, it is advocated for the first time
+to integrate software updates more than once per day.
+
+Continuous Integration (CI)             |  Continuous Delivery (CD)
+:-------------------------:|:-------------------------:
+![ci](https://images-na.ssl-images-amazon.com/images/I/51lkZKjkpfL._SX376_BO1,204,203,200_.jpg) | ![cd](https://images-na.ssl-images-amazon.com/images/I/51NbiDn81NL._SX385_BO1,204,203,200_.jpg)
+
+Continuous Integration and Continuous Delivery are both practices to make the integration and delivery of software artefact increments easier and faster available for end users.
+
+Continuous integration deals primarily with integrating code changes whenever there's something worth integrating into the main source code so that:
+- every change is automatically unit tested
+- doesn't produce too large merge conflicts with for other developers
+- doesn't break the build on the main source code branch
+
+Continuous delivery takes the idea of CI a bit further: Every change which is worth to be released is accessible by end users right on. This allows end users to try out new features early and give feedback. Other pros are:
+- fast feedback from the end user if updates are what they wanted
+- with the automation of the deployment process you have ideally a single button to trigger new releases and deploy into production
+
+### CI Workflow
+
+![ci](https://docs.microsoft.com/de-de/azure/cognitive-services/luis/media/luis-concept-devops-automation/luis-automation.png)
+
+- Compile code in CI
+- Run tests in CI
+- Deploy an artifact from CI
+ 
+### CD Workflow
+
+![workflow](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Continuous_Delivery_process_diagram.svg/731px-Continuous_Delivery_process_diagram.svg.png)
+
+[https://en.wikipedia.org/wiki/Continuous_delivery](https://en.wikipedia.org/wiki/Continuous_delivery)
 
 ### CI vs CD
 
-### CD vs Continuous Deployment
+### Goals and Common Practices
+
+- Maintain a code repository
+- Automate the build
+- Everyone commits to the baseline every day
+- Every commit (to baseline) should be built
+- Keep the build fast
+
+### Software Metrics / Quality Gate
+
+generated from automated testing and CI (such as metrics for code coverage, code complexity, and feature completeness)
+
+![sonar](https://miro.medium.com/max/3964/1*z-kdUUZ8_ca6h7HFND-y4Q.png)
+[https://www.sonarqube.org/](https://www.sonarqube.org/)
 
 ## [Concourse](https://github.com/concourse/concourse)
 
