@@ -5,12 +5,14 @@
 
 Contents:
 - Discussion
-- CI/CD
-- End-To-End Example
+- CI/CD - Goals, Workflows, Practices
+- End-To-End Example with Concourse
 
 ## Discussion
-- How are software releases managed in your respective company?
+- How are software releases managed in your company?
 - What techniques and practices are you already familiar with?
+
+## Overview: What is Continuous Integration (CI) / Continuous Delivery (CD)?
 
 The go-to books on the subject of integrating modern software systems are Continuous Integration and Continuous Delivery which also
 coined the term CI/CD.
@@ -18,20 +20,51 @@ coined the term CI/CD.
 In [Extreme Programming](https://en.wikipedia.org/wiki/Extreme_programming) from Kent Beck, another classic literature, it is advocated for the first time
 to integrate software updates more than once per day.
 
-Continuous Integration (CI)             |  Continuous Delivery (CD)
+Continuous Integration             |  Continuous Delivery 
 :-------------------------:|:-------------------------:
 ![ci](https://images-na.ssl-images-amazon.com/images/I/51lkZKjkpfL._SX376_BO1,204,203,200_.jpg) | ![cd](https://images-na.ssl-images-amazon.com/images/I/51NbiDn81NL._SX385_BO1,204,203,200_.jpg)
 
-Continuous Integration and Continuous Delivery are both practices to make the integration and delivery of software artefact increments easier and faster available for end users.
+CI and CD are both practices to make the integration and delivery of software artefact increments easier and faster available for end users.
 
-Continuous integration deals primarily with integrating code changes whenever there's something worth integrating into the main source code so that:
+CI deals primarily with integrating code changes whenever there's something worth integrating into the main source code so that:
 - every change is automatically unit tested
 - doesn't produce too large merge conflicts with for other developers
 - doesn't break the build on the main source code branch
 
-Continuous delivery takes the idea of CI a bit further: Every change which is worth to be released is accessible by end users right on. This allows end users to try out new features early and give feedback. Other pros are:
+CD takes the idea of CI a bit further: Every change which is worth to be released is accessible by end users right on. This allows end users to try out new features early and give feedback. Other pros are:
 - fast feedback from the end user if updates are what they wanted
 - with the automation of the deployment process you have ideally a single button to trigger new releases and deploy into production
+
+## Continuous Integration
+
+### Build At Every Change
+
+![img](https://user-images.githubusercontent.com/3501767/97041382-c5dbc680-156f-11eb-8136-5e1f0f1ffcd4.png)
+
+#### What is a Build?
+
+- Discussion
+
+#### What is a Source Code Management System (SCM)?
+
+- Discussion
+
+### Ideas
+
+- Commit Code Frequently
+- Don’t Commit Broken Code
+- Fix Broken Builds Immediately
+- Run Private Builds
+- All Tests and Inspections Must Pass
+- Write Automated Developer Tests
+
+### Value of Continuous Integration
+
+- Reduce risks
+- Reduce repetitive manual processes
+- Generate deployable software at any time and at any place
+- Enable better project visibility
+- Establish greater confidence in the software product from the development team
 
 ### CI Workflow
 
@@ -49,7 +82,7 @@ Continuous delivery takes the idea of CI a bit further: Every change which is wo
 
 ### CI vs CD
 
-### Goals and Common Practices
+### Summary: Goals and Common Practices
 
 - Maintain a code repository
 - Automate the build
@@ -57,9 +90,17 @@ Continuous delivery takes the idea of CI a bit further: Every change which is wo
 - Every commit (to baseline) should be built
 - Keep the build fast
 
-### Software Metrics / Quality Gate
+### Continuous Inspection
 
-generated from automated testing and CI (such as metrics for code coverage, code complexity, and feature completeness)
+Goals and ideas:
+
+- Reduce Code Complexity
+- Perform Design Reviews Continuously
+- Maintain Organizational Standards with Code Audits
+- Assess Code Coverage
+- Reduce Duplicate Code
+
+Generated from automated testing and CI (such as metrics for code coverage, code complexity, and feature completeness)
 
 ![sonar](https://miro.medium.com/max/3964/1*z-kdUUZ8_ca6h7HFND-y4Q.png)
 [https://www.sonarqube.org/](https://www.sonarqube.org/)
