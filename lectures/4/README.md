@@ -3,6 +3,11 @@
 
 # Lecture 4 - Integrating Software Systems
 
+Contents:
+- Discussion
+- CI/CD
+- End-To-End Example
+
 ## Discussion
 - How are software releases managed in your respective company?
 - What techniques and practices are you already familiar with?
