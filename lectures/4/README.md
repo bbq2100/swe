@@ -128,7 +128,7 @@ Generated from automated testing and CI (such as metrics for code coverage, code
 ![sonar](https://miro.medium.com/max/3964/1*z-kdUUZ8_ca6h7HFND-y4Q.png)
 [https://www.sonarqube.org/](https://www.sonarqube.org/)
 
-[Live Example](https://sonarcloud.io/dashboard?id=fiunes_elasticsearch)
+[Live Example](https://sonarcloud.io/project/issues?id=fiunes_elasticsearch&resolved=false&types=CODE_SMELL)
 
 ## [Concourse](https://github.com/concourse/concourse)
 
