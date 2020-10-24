@@ -6,7 +6,7 @@
 Contents:
 - Discussion
 - CI/CD - Goals, Workflows, Practices
-- End-To-End Example with Concourse
+- End-To-End Example with Github Actions
 
 ## Discussion
 - How are software releases managed in your company?
@@ -209,6 +209,6 @@ jobs:
           echo "Output of your other tasks."
 ```
 
-## End-To-End Example
+## End-To-End Example with Github Actions
 
 [https://github.com/qaismyname/ci-example](https://github.com/qaismyname/ci-example)
