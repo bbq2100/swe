@@ -50,9 +50,9 @@ After looking into architecture patterns we will examine concrete design pattern
 
 This lecture is about Continuous Integration and Continuous Delivery (also known as `CI/CD`) - we will learn how to integrate and rollout software in existing software systems
 
-[5 Case Study - Implementing `TODO`](./lectures/5/README.md)
+[5 Case Study - Implementing an `Alerting Service`](./lectures/5/README.md)
 
-At the end of the semester we will have a look at a small software project in which we try to apply the learned material by focusing on the following three aspects:
+At the end of the semester we will have a look at a small software project in which we try to apply the learned material by focusing on the following aspects:
 
 - Understanding the requirements and use cases
 - Crafting and design a solution architecture 
