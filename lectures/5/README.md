@@ -5,9 +5,10 @@
 
 Content:
 - Problem Definition
-- Design
+- Architecture
 - Implementation
-- Integration
+- Rollout
+- Further Improvements
 
 ## Problem Definition
 
@@ -20,7 +21,7 @@ LoudHailer is an voice recognition and alerting service to help people getting h
 - use case diagram
 - sequence flow
 
-## Architecture & Design
+## Architecture
 
 - functional requirements
 - non functional requirements
