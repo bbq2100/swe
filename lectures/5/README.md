@@ -5,7 +5,6 @@
 
 Content:
 - Problem Definition
-- Discussion
 - Design
 - Implementation
 - Integration
@@ -16,13 +15,24 @@ Content:
 
 [https://github.com/qaismyname/Loudhailer](https://github.com/qaismyname/Loudhailer)
 
-## Discussion
+LoudHailer is an voice recognition and alerting service to help people getting help when they are in need.
+
+- use case diagram
+- sequence flow
 
 ## Architecture & Design
 
+- functional requirements
+- non functional requirements
+
 ## Implementation
 
+- backend, rpi, cloud
+- client
+
 ## Rollout
+
+-
 
 ## Further Improvements
 
