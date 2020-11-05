@@ -145,7 +145,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
 [Source](https://github.com/qaismyname/Loudhailer/blob/master/LoudHailerClient/app/src/main/AndroidManifest.xml)
 
-TODO add screenshot
+![img](https://user-images.githubusercontent.com/3501767/98283785-70a4a980-1fa0-11eb-9af6-f1def3f33c68.png)
 
 ## Rollout
 
