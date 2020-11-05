@@ -22,9 +22,9 @@ LoudHailer is a voice recognition and alerting service to help people getting he
 
 ![img](https://camo.githubusercontent.com/0f21dc953520f91fea19254b0bb76c4ec8a4d87d/687474703a2f2f692e696d6775722e636f6d2f43765767526c306c2e706e67)
 
-#### Akka Streams (Scala)
+### Akka Streams (Scala)
 
-![img](https://www.oreilly.com/library/view/scala-reactive-programming/9781787288645/assets/187aad22-ce43-4a6e-87a6-9ff1499d5e58.png)
+![img](https://res.cloudinary.com/dxqjvpa0t/image/upload/v1557536317/1_HJRZjHOSZvKZY5mHW5-4LQ.png)
 
 Schematic structure of [Akka streams](https://doc.akka.io/docs/akka/current/stream/index.html) applications 
 
