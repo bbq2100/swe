@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+actor "Person in need" as p1
+actor "Helper" as p2
+package Home {
+  usecase "Ask for help" as UC1
+  usecase "Getting Notified" as UC2
+}
+p1 --> UC1
+p2 --> UC2
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+"Person in need" -> LoudHailer: Ask for help
+LoudHailer --> Helper: Informs helper
+
+"Person in need" <-- Helper: Helps person in need
+@enduml

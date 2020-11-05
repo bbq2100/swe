@@ -11,25 +11,130 @@ Content:
 - Further Improvements
 
 ## Problem Definition
-
-![img](https://camo.githubusercontent.com/0f21dc953520f91fea19254b0bb76c4ec8a4d87d/687474703a2f2f692e696d6775722e636f6d2f43765767526c306c2e706e67)
+LoudHailer is a voice recognition and alerting service to help people getting help when they are in need.
 
 [https://github.com/qaismyname/Loudhailer](https://github.com/qaismyname/Loudhailer)
 
-LoudHailer is an voice recognition and alerting service to help people getting help when they are in need.
+![img](../../bin/dist/loudhailer_use_case.png)
 
-- use case diagram
-- sequence flow
+![img](../../bin/dist/loudhailer_sequence.png)
 
 ## Architecture
 
-- functional requirements
-- non functional requirements
+![img](https://camo.githubusercontent.com/0f21dc953520f91fea19254b0bb76c4ec8a4d87d/687474703a2f2f692e696d6775722e636f6d2f43765767526c306c2e706e67)
 
-## Implementation
+#### Akka Streams (Scala)
 
-- backend, rpi, cloud
-- client
+![img](https://www.oreilly.com/library/view/scala-reactive-programming/9781787288645/assets/187aad22-ce43-4a6e-87a6-9ff1499d5e58.png)
+
+Schematic structure of [Akka streams](https://doc.akka.io/docs/akka/current/stream/index.html) applications 
+
+### Backend
+
+```Scala
+Source.tick(0 second, 5 seconds, ())
+        .map(sample)
+        .map(analyse)
+        .runForeach(act)
+```
+
+```Scala
+def sample: Unit => Sample = _ => SoundRecorder.sample
+```
+
+```Scala
+def analyse: Sample => Future[Hypothesis] = {
+    case Xor.Left(e) => Future.failed(e)
+    case Xor.Right(data) =>
+      for {
+        response <- request(data)
+        hypothesis <- Unmarshal(response.entity).to[Hypothesis]
+      } yield hypothesis
+  }
+  
+def request: Array[Byte] => Future[HttpResponse] = data =>
+  Http().singleRequest(HttpRequest(
+    method = HttpMethods.POST,
+    uri = witUrl,
+    headers = List(headers.RawHeader("Authorization", s"Bearer $witToken")),
+    entity = HttpEntity(contentType = `audio/wav`, data)))
+```
+
+```Scala
+def act: Future[Hypothesis] => Unit = f => {
+    f.onComplete {
+      case Success(h) => if (blackList.contains(response.hypothesis)) broadcastEvent()
+      case Failure(e) => e.printStackTrace()
+    }
+  }
+  
+def broadcastEvent() = {
+    val body = Map(
+      "to" -> "/topics/alert".asJson,
+      "data" -> Map(
+        "message" -> "An incident occurred.".asJson
+      ).asJson
+    ).asJson
+
+    Http().singleRequest(
+      HttpRequest(
+        method = HttpMethods.POST,
+        uri = fireBaseUrl,
+        headers = List(headers.RawHeader("Authorization", s"key=$fireBaseToken")),
+        entity = HttpEntity(contentType = `application/json`, body.noSpaces)))
+  }
+```
+
+[Source](https://github.com/qaismyname/Loudhailer/blob/master/voice-recognition-stream/src/main/scala/github/qabbasi/loudhailer/SoundRecorder.scala)
+
+### Mobile (Android Kotlin)
+
+```Kotlin
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+
+    override fun onMessageReceived(remoteMessage: RemoteMessage?) {
+
+        // Check if the message contains a data payload.
+        if (remoteMessage != null && remoteMessage.data.size > 0) {
+            val message: String? = remoteMessage.data["message"]
+            if (message != null)
+                sendNotification(message)
+        }
+
+    }
+
+    private fun sendNotification(message: String) {
+        val intent = Intent(this, AlarmActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        intent.putExtra(AlarmActivity.MESSAGE, message)
+        startActivity(intent)
+    }
+```
+
+```xml
+ <activity android:name=".MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+<service android:name=".MyFirebaseMessagingService">
+    <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+    </intent-filter>
+</service>
+
+<activity
+    android:name=".AlarmActivity"
+    android:configChanges="orientation|keyboardHidden|screenSize"
+    android:label="@string/title_activity_alarm"
+    android:theme="@style/FullscreenTheme">
+</activity>
+```
+
+[Source](https://github.com/qaismyname/Loudhailer/blob/master/LoudHailerClient/app/src/main/AndroidManifest.xml)
 
 ## Rollout
 
