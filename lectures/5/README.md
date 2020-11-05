@@ -6,7 +6,6 @@
 Content:
 - Problem Definition
 - Architecture
-- Implementation
 - Rollout
 - Further Improvements
 
