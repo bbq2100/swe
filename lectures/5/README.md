@@ -84,6 +84,10 @@ def broadcastEvent() = {
   }
 ```
 
+### wit.ai API
+
+![img](https://user-images.githubusercontent.com/3501767/98281518-279f2600-1f9d-11eb-8401-9957a50b6745.png)
+
 [Source](https://github.com/qaismyname/Loudhailer/blob/master/voice-recognition-stream/src/main/scala/github/qabbasi/loudhailer/SoundRecorder.scala)
 
 ### Mobile (Android Kotlin)
