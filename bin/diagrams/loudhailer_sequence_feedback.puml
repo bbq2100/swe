@@ -2,5 +2,6 @@
 "Person in need" -> LoudHailer: Ask for help
 LoudHailer --> Helper: Inform helper
 
-"Person in need" <-- Helper: Help person in need
+"LoudHailer" <-- Helper: Acknowledge alert
+"Person in need" <-- LoudHailer: Give feedback
 @enduml

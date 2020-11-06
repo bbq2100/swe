@@ -148,11 +148,20 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
 [Source](https://github.com/qaismyname/Loudhailer/blob/master/LoudHailerClient/app/src/main/AndroidManifest.xml)
 
-
 ## Rollout
 
--
+### [Microsoft App Center](https://docs.microsoft.com/en-us/appcenter/distribution/uploading)
+
+![img](https://docs.microsoft.com/en-us/appcenter/build/images/build_getting-started-dashboard.jpg)
+
+![img](https://docs.microsoft.com/en-us/appcenter/distribution/images/distribution_successful-release.png)
+
+### [https://appetize.io/](https://appetize.io/)
+
+![img](https://user-images.githubusercontent.com/3501767/98391300-c045ac80-2056-11eb-8d66-83da6349d2e5.png)
 
 ## Further Improvements
 
--
+### Create Feedback Loop
+
+![img](../../bin/dist/loudhailer_sequence_feedback.png)
