@@ -12,3 +12,5 @@ Contents:
 - client server architecture
 - cloud architecture
 - serverless
+
+https://martinfowler.com/architecture/
