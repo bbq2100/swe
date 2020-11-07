@@ -5,5 +5,7 @@
 
 Contents:
 - Architecture patterns such as Model View Control (MVC)
-- ...
+- client server architecture
+- cloud architecture
+- serverless
 - Example
