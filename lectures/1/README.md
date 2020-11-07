@@ -130,11 +130,9 @@ The methods getName() and setName() are public whereas getting the address is pr
 
 Interpretation of the Diagram:
 
-A driver drives a car.
-
-A car has 4 wheels.
-
-A person owns a car.
+A driver drives a car.  
+A car has 4 wheels.  
+A person owns a car.  
 
 ![association](../../bin/dist/association.png)
 
@@ -172,20 +170,79 @@ The UML defines the following properties of interaction diagrams in general:
 - Communication Partner
 - Message flow elements
  
-Note that there are multiple interaction diagrams existing in UML with different focuses and goals. Here we
-will look at Sequence diagrams since one would encounter them usually more often than other diagram types.
+_Note that there are multiple interaction diagrams existing in UML with different focuses and goals. Here we
+will look at Sequence diagrams since one would encounter them usually more often than other interaction diagram types._
 
-A sequence diagram describes...
+A sequence diagram mainly describes interactions between objects in a system.
 
-- 
+#### Object Dimension
+The horizontal axis shows the elements that are involved in the interaction
+Conventionally, the objects involved in the operation are listed from left to right according to when they take part in the message sequence. However, the elements on the horizontal axis may appear in any order
+
+#### Time Dimension
+The vertical axis represents time proceedings (or progressing) down the page.
 
 ### Notation
 
 ![notation](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRech9JIajGS_7ni9jxXUTV7bYwIXBu4Rngag&usqp=CAU)
 
+#### Actor
+
+![img](https://cdn-images.visual-paradigm.com/guide/uml/what-is-sequence-diagram/02-actor.png)
+
+A type of role played by an entity that interacts with the subject (e.g., by exchanging signals and data)
+external to the subject (i.e., in the sense that an instance of an actor is not a part of the instance of its corresponding subject).
+represent roles played by human users, external hardware, or other subjects.
+
+#### Lifeline
+
+![img](https://cdn-images.visual-paradigm.com/guide/uml/what-is-sequence-diagram/03-lifeline.png)
+
+A lifeline represents an individual participant in the Interaction.
+
+#### Activations
+     
+![img](https://cdn-images.visual-paradigm.com/guide/uml/what-is-sequence-diagram/04-activation.png)
+     
+A thin rectangle on a lifeline) represents the period during which an element is performing an operation.
+The top and the bottom of the of the rectangle are aligned with the initiation and the completion time respectively
+
+#### Call Message
+
+![img](https://cdn-images.visual-paradigm.com/guide/uml/what-is-sequence-diagram/05-call-message.png)
+     
+A message defines a particular communication between Lifelines of an Interaction.
+Call message is a kind of message that represents an invocation of operation of target lifeline.
+
+#### Return Message
+
+![img](https://cdn-images.visual-paradigm.com/guide/uml/what-is-sequence-diagram/06-return-message.png)
+     
+A message defines a particular communication between Lifelines of an Interaction.
+Return message is a kind of message that represents the pass of information back to the caller of a corresponded former message.
+
 ## State Diagram
 
-![use_case](../../bin/dist/state.png)
+![use_case](https://www.uml-diagrams.org/notation/behavioral-state-machine-frame.png)
+
+A state machine diagram models the behaviour of a single object, specifying the sequence of events that an object goes through during its lifetime in response to events.
+
+#### States
+
+![img](https://sparxsystems.com/images/screenshots/uml2_tutorial/sm02.GIF)
+
+A state is denoted by a round-cornered rectangle with the name of the state written inside it.
+     
+#### Initial and Final States
+
+![img](https://sparxsystems.com/images/screenshots/uml2_tutorial/sm03.GIF)
+The initial state is denoted by a filled black circle and may be labeled with a name. The final state is denoted by a circle with a dot inside and may also be labeled with a name.
+
+#### Transitions
+
+![img](https://sparxsystems.com/images/screenshots/uml2_tutorial/sm04.GIF)
+
+Transitions from one state to the next are denoted by lines with arrowheads. A transition may have a trigger, a guard and an effect, as below.
 
 ### Notation
 
