@@ -60,7 +60,7 @@ At the end of the semester we will have a look at a small software project in wh
 
 [6 Exam Preparation / Final Q&A](./lectures/6/README.md)
 
-In the last lecture we will have a final look at the learned material and preparse for the examination
+In the last lecture we will have a final look at the learned material and prepare for the examination
 
 -----
 
