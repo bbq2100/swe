@@ -62,7 +62,9 @@ At the end of the semester we will have a look at a small software project in wh
 
 In the last lecture we will have a final look at the learned material and preparse for the examination
 
-Note that each lecture directory contains exercises and solutions for the exercises.
+-----
+
+Note that each lecture directory contains exercises and solutions.
 
 For example, for [lecture 1](./lectures/1/README.md) you'll find the following resources under `./lectures/1`
 
