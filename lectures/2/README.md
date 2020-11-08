@@ -4,13 +4,11 @@
 # Lecture 2 - Software Architecture
 
 Contents:
-- Architecture patterns such as Model View Control (MVC), tiered architecture
+- Architecture patterns such as Model View Control (MVC)
 - restful architecture
 - microservice
-- monolithic 
 - event driven, event sourcing
 - client server architecture
-- cloud architecture
 - serverless
 
 https://martinfowler.com/architecture/
