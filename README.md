@@ -40,7 +40,7 @@ In the first lecture we are familiarizing with common UML diagram types such as:
 
 [2 Software Architecture](./lectures/2/README.md)
 
-The second lecture is about common architecture patterns such as Model View Control (MVC), and modularisation
+The second lecture is about common architecture patterns such as Model View Control (MVC), RESTful, Microservice, Serverless Architecture
 
 [3 Software Design Patterns](./lectures/3/README.md)
 
