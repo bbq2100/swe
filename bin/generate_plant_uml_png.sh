@@ -5,7 +5,6 @@ echo "Generating Plantuml Diagrams"
 
 BASEDIR=$(dirname "$0")
 mkdir -p "$BASEDIR"/dist
-rm "$BASEDIR"/dist/* > /dev/null
 for FILE in "$BASEDIR"/diagrams/*.puml; do
   echo Converting "$FILE"..
   FILE_PNG=${FILE//puml/png}
