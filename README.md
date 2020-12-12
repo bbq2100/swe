@@ -2,6 +2,9 @@
 
 ![logo](https://knda.de/wp-content/uploads/2019/Betriebe/FOM_2015_CMYK_MitWortmarke.png)
 
+![](https://api.kindspeech.org/v1/badge)
+
+
 Slides & example code from the Software Engineering lecture first held WS 20/21 @ [FOM University of Applied Sciences for Economics and Management Berlin](https://www.fom.de/studiengaenge/it-management/bachelor-studiengaenge/informatik/_produkte;inhalte.html).
 
 The lecture is practical-oriented, e.g. it doesn't explain all possible UML diagram types but rather focuses on few selected key topics. All explanations are accompanied by code examples and UML diagrams. Also, all lectures contain exercises together with solutions. The target audience of this lecture are students which are familiar with at least one high-level programming language, e.g. Java.
