@@ -167,6 +167,15 @@ a class, an abstract class or an interface.
 In the above example we can see that ArrayList is fundamentally a Collection since it inherits from AbstractList which in turn
 inherits from List which extends the Collection interface.
 
+### Examples
+
+![example](https://www.uml-diagrams.org/examples/class-example-abstract-factory.png)
+![example](https://www.uml-diagrams.org/examples/class-example-library-domain.png)
+![example](https://www.uml-diagrams.org/examples/class-example-online-shopping-domain.png)
+![example](https://www.uml-diagrams.org/examples/bank-account-domain-class-diagram.png)
+![example](https://www.uml-diagrams.org/examples/health-insurance-policy-domain-diagram.png)
+
+
 ## Sequence Diagram
 
 ![use_case](../../bin/dist/sequence.png)
@@ -230,6 +239,14 @@ Call message is a kind of message that represents an invocation of operation of 
 A message defines a particular communication between Lifelines of an Interaction.
 Return message is a kind of message that represents the pass of information back to the caller of a corresponded former message.
 
+### Examples
+
+![example](https://www.uml-diagrams.org/examples/sequence-examples-online-bookshop.png)
+![example](https://www.uml-diagrams.org/examples/sequence-example-dwr-ajax-comments.png)
+![example](https://www.uml-diagrams.org/examples/sequence-example-facebook-authentication.png)
+![example](https://www.uml-diagrams.org/examples/spring-hibernate-transaction-sequence-diagram-example.png)
+
+
 ## State Diagram
 
 ![use_case](https://www.uml-diagrams.org/notation/behavioral-state-machine-frame.png)
@@ -256,3 +273,11 @@ Transitions from one state to the next are denoted by lines with arrowheads. A t
 ### Notation
 
 ![notation](https://www.edrawsoft.com/solutions/shapes/uml-statechart-diagram.png)
+
+### Examples
+
+![example](https://www.uml-diagrams.org/examples/state-machine-example-water.png)
+![example](https://www.uml-diagrams.org/examples/state-machine-example-bank-atm.png)
+![example](https://www.uml-diagrams.org/examples/online-shopping-user-account-state-diagram-example.png)
+![example](https://www.uml-diagrams.org/examples/state-machine-example-java-6-thread-states.png)
+![example](https://www.uml-diagrams.org/examples/state-machine-example-session-object.png)
