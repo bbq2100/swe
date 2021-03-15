@@ -35,9 +35,9 @@ UML is not...
 
 #### Model vs Reality
 
-![map](./../../bin/static/map.png)
-
 ![satellite](./../../bin/static/satellite.png)
+
+![map](./../../bin/static/map.png)
 
 This example should demonstrate that a model is only there to capture the essential parts of an entity in the real world.
 If we try to model out every aspect then it is harder to focus on the _important_ parts of a model.
