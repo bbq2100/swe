@@ -94,6 +94,15 @@ of another use case, in the example above: when opening a book, reading is inclu
 
 'exclude' is something optional - in the above example one can open a book and _optionally_ turn a page.
 
+### Examples
+
+![example](https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/what-is-a-use-case-diagram-in-UML/UML_use_case_example-800x707.PNG)
+![example](https://www.uml-diagrams.org/use-case-diagrams/use-case-diagram-elements.png)
+![example](https://www.uml-diagrams.org/examples/use-case-example-airport.png)
+![example](https://www.uml-diagrams.org/use-case-diagrams/use-case-purchase-ticket.png)
+![example](https://www.uml-diagrams.org/examples/use-case-example-hospital-reception.png)
+
+
 ## Class Diagram
 
 ![use_case](../../bin/dist/class.png)
