@@ -313,7 +313,8 @@ Servers publish their capabilities (services and characteristics) to a broker. C
 Usage
 - Message broker software such as Apache ActiveMQ, Apache Kafka, RabbitMQ and JBoss Messaging.
 
-![img](https://lh3.googleusercontent.com/proxy/ntruUNB9Rf332qdqfhRVgqOYEBIxdFInPBnZHVF3AGE2dZlKKQbCfjHFzPK2gzZxPUmXjkWDlrBfi_bqtCLdbmszF70uhCnAXE4Q5AaAT4-5IUDjSrwo)
+![img](https://apptraitsolutions.com/wp-content/uploads/2019/07/Broker-Pattern-Diagrm.jpg)
+
 
 #### Apache Kafka
 
@@ -384,6 +385,20 @@ Topic - devglan-test, Partition - 0, Value: test message - 2
 ## RESTful APIs
 
 ![img](https://www.seobility.net/en/wiki/images/f/f1/Rest-API.png)
+
+![img](https://miro.medium.com/max/1400/0*RRPP-ZT1U2nZFqDa)
+
+### Principles
+- Application state and functionality are divided into resources and than the application would respond based on the resource that the operation is being performed
+Resources are addressable using standard URIs that can be used as hypermedia links such as http://example.com/resources/ and than for each resource the type of the resource is added in the URI such as http://example.com/resources/resource.
+- Resources provide information using MIME( Multipurpose Internet Mail Extensions)types supported by HTTP (e.g JSON, XML, Atom, etc.)
+- Use only standard HTTP methods, they are GET, PUT, POST and DELETE.
+- Protocol is stateless, cacheable and layered
+
+![img](https://miro.medium.com/max/842/0*XCPO8UXIQ_nL5Ha0)
+
+![img](https://miro.medium.com/max/1400/0*hf6eSRZm5GM7W_hB)
+
 
 #### Github REST API
 
