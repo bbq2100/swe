@@ -78,6 +78,132 @@ firstApp.controller('MyController', function($scope) {
 - In terms of servlet and JSP, both often contains business logic and presentation tier.
 - The isolated development process by UI authors, business logic authors and controller authors may lead to delay in their respective modules development.
 
+### Another Example
+
+![img](https://examples.javacodegeeks.com/wp-content/uploads/2016/01/swing_mvc_components.jpg.webp)
+
+### Model
+
+```java
+public class Model extends DefaultTableModel {
+ 
+    public Model() {
+        super(Constants.DATA, Constants.TABLE_HEADER);
+    }
+ 
+}
+
+....
+
+public class Constants {
+ 
+    public static final Object[] TABLE_HEADER = { "Symbol", "Company Name",
+            "Price", "Change", "% Change", "Volume" };
+ 
+    public static final Object[][] DATA = {
+            { "BAC", "Bank of America Corporation", 15.98, 0.14, "+0.88%",
+                    32157250 },
+            { "AAPL", "Apple Inc.", 126.57, -1.97, "-1.54%", 31367143 },
+            { "ABBV", "AbbVie Inc.", 57.84, -2.43, "-4.03%", 30620258 },
+            { "ECA", "Encana Corporation", 11.74, -0.53, "-4.33%", 27317436 },
+            { "VALE", "Vale S.A.", 6.55, -0.33, "-4.80%", 19764400 },
+            { "FB", "Facebook, Inc.", 81.53, 0.64, "+0.78%", 16909729 },
+            { "PBR", "Petróleo Brasileiro S.A. - Petrobras", 6.05, -0.12,
+                    "-2.02%", 16181759 },
+            { "NOK", "Nokia Corporation", 8.06, 0.01, "+0.12%", 13611860 },
+            { "PCYC", "Pharmacyclics Inc.", 254.67, 24.19, "+10.50%", 13737834 },
+            { "RAD", "Rite Aid Corporation", 7.87, -0.18, "-2.24%", 13606253 } };
+     
+}
+```
+
+### View
+
+```java
+public class View {
+ 
+    public View() {
+        // Create views swing UI components 
+        JTextField searchTermTextField = new JTextField(26);
+        JButton filterButton = new JButton("Filter");
+        JTable table = new JTable();
+ 
+        // Create table model
+        Model model = new Model();
+        table.setModel(model);
+ 
+        // Create controller
+        Controller controller = new Controller(searchTermTextField, model);
+        filterButton.addActionListener(controller);
+ 
+        // Set the view layout
+        JPanel ctrlPane = new JPanel();
+        ctrlPane.add(searchTermTextField);
+        ctrlPane.add(filterButton);
+ 
+        JScrollPane tableScrollPane = new JScrollPane(table);
+        tableScrollPane.setPreferredSize(new Dimension(700, 182));
+        tableScrollPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Market Movers",
+                TitledBorder.CENTER, TitledBorder.TOP));
+ 
+        JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, ctrlPane, tableScrollPane);
+        splitPane.setDividerLocation(35);
+        splitPane.setEnabled(false);
+ 
+        // Display it all in a scrolling window and make the window appear
+        JFrame frame = new JFrame("Swing MVC Demo");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(splitPane);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+ 
+}
+```
+
+### Controller
+
+```java
+public class Controller implements ActionListener {
+     
+    private JTextField searchTermTextField = new JTextField(26);
+    private DefaultTableModel model;
+ 
+    public Controller(JTextField searchTermTextField, DefaultTableModel model) {
+        super();
+        this.searchTermTextField = searchTermTextField;
+        this.model = model;
+    }
+ 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+ 
+        String searchTerm = searchTermTextField.getText();
+        if (searchTerm != null && !"".equals(searchTerm)) {
+            Object[][] newData = new Object[Constants.DATA.length][];
+            int idx = 0;
+            for (Object[] o: Constants.DATA) {
+                if ("*".equals(searchTerm.trim())) {
+                    newData[idx++] = o;
+                } else {
+                    if(String.valueOf(o[0]).startsWith(searchTerm.toUpperCase().trim())){
+                        newData[idx++] = o;
+                    }   
+                }   
+            }
+            model.setDataVector(newData, Constants.TABLE_HEADER);
+        } else {
+            JOptionPane.showMessageDialog(null,
+                    "Search term is empty", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }
+ 
+}
+```
+
+![img](https://examples.javacodegeeks.com/wp-content/uploads/2016/01/swing_mvc_demo.jpg.webp)
 
 ### Client-Server
 
