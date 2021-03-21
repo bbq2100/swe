@@ -17,6 +17,12 @@ Contents:
 
 ### MVC
 
+MVC (Model-View-Controller) is an architectural design pattern that encourages improved application organization through a separation of concerns. It divides an interactive application into three components: Model / View and Controller. It enforces the isolation of business data (Models) from user interfaces (Views), with a third component (Controllers) traditionally managing logic, user-input and coordinating both the models and views. The goal of MVC is to help structure the separate the concerns of an application into three parts:
+
+Model is responsible for managing the data of the application. It receives user input from the controller.
+View means the presentation of the model in a particular format.
+Controller responds to the user input and performs interactions on the data model objects. The controller receives the input, optionally validates it and then passes the input to the model.
+
 ![img](https://www.tektutorialshub.com/wp-content/uploads/2017/10/Model-View-Controller-in-ASP.NET-Core.png)
 
 #### [AngularJS](https://angularjs.org/)
