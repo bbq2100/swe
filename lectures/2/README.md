@@ -205,6 +205,11 @@ public class Controller implements ActionListener {
 
 ![img](https://examples.javacodegeeks.com/wp-content/uploads/2016/01/swing_mvc_demo.jpg.webp)
 
+Usage
+- Architecture for World Wide Web applications in major programming languages.
+- Web frameworks such as Django and Rails.
+
+
 ### Client-Server
 
 ![img](https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg)
@@ -255,7 +260,17 @@ public class Controller implements ActionListener {
 - Extra security must be added so that the data does not get spoofed in between the transmission. 
 - The main problem can be server down. When the server is down, the client loses its connection and will not access the data. 
 
+### Usage
+- Online applications such as email, document sharing and banking.
+
+
 ### Boss-Worker
+
+This pattern consists of two parties; boss and workers. The boss component distributes the work among identical workers components, and computes a final result from the results which the workers return.
+
+#### Usage
+- In database replication, the master database is regarded as the authoritative source, and the slave databases are synchronized to it.
+- Peripherals connected to a bus in a computer system (master and slave drives).
 
 ![img](https://miro.medium.com/max/524/1*t3afE6XumWMXhUGtgzVZQA.png)
 
@@ -263,7 +278,17 @@ public class Controller implements ActionListener {
 
 ![img](https://www.percona.com/blog/wp-content/uploads/2017/01/replicationarchitecturexample.png)
 
-### Pipe-filter
+#### Another Example
+
+![img](https://cdn-images-1.medium.com/max/800/1*1m6mZynfl0qy38VOZicMTA.jpeg)
+
+### Pipe And filter
+
+This pattern can be used to structure systems which produce and process a stream of data. Each processing step is enclosed within a filter component. Data to be processed is passed through pipes. These pipes can be used for buffering or for synchronization purposes.
+Usage
+- Compilers. The consecutive filters perform lexical analysis, parsing, semantic analysis, and code generation.
+- etl pipelines
+- data processing
 
 ![img](https://static.packt-cdn.com/products/9781788992992/graphics/6dcf7298-18ab-4d18-a493-7eea17cc165f.png)
 
@@ -273,11 +298,20 @@ public class Controller implements ActionListener {
 cat sample | grep -v a | sort - r
 ```
 
+#### Another Example
+
+![img](https://homepages.fhv.at/thjo/lecturenotes/sysarch/figures/pap/pipes_and_filters_example.png)
+
 #### ETL Pipeline
 
 ![img](https://panoply.io/uploads/versions/diagram4---x----750-328x---.jpg)
 
 ### Broker pattern
+
+This pattern is used to structure distributed systems with decoupled components. These components can interact with each other by remote service invocations. A broker component is responsible for the coordination of communication among components.
+Servers publish their capabilities (services and characteristics) to a broker. Clients request a service from the broker, and the broker then redirects the client to a suitable service from its registry.
+Usage
+- Message broker software such as Apache ActiveMQ, Apache Kafka, RabbitMQ and JBoss Messaging.
 
 ![img](https://lh3.googleusercontent.com/proxy/ntruUNB9Rf332qdqfhRVgqOYEBIxdFInPBnZHVF3AGE2dZlKKQbCfjHFzPK2gzZxPUmXjkWDlrBfi_bqtCLdbmszF70uhCnAXE4Q5AaAT4-5IUDjSrwo)
 
