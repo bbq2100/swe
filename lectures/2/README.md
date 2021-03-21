@@ -9,7 +9,7 @@ Contents:
 - Microservice
 - Serverless
 
-### [https://martinfowler.com/architecture/](https://martinfowler.com/architecture/)
+### [Great resource to learn about software architecture](https://martinfowler.com/architecture/)
 
 ![img](https://user-images.githubusercontent.com/3501767/99104172-efbd6180-25e0-11eb-9556-507c9a2c8934.png)
 
