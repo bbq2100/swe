@@ -55,6 +55,22 @@ firstApp.controller('MyController', function($scope) {
 });
 ```
 
+### Advantages
+
+- Simultaneous development — Multiple developers can work simultaneously on the model, controller and views.
+- High cohesion — MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped together.
+- Low coupling — The very nature of the MVC framework is such that there is low coupling among models, views or controllers
+- Ease of modification — Because of the separation of responsibilities, future development or modification is easier
+- Multiple views for a model — Models can have multiple views
+
+### Cons of MVC Pattern:
+
+- The complexity is high to develop the applications using this pattern.
+- Not right suitable for small applications which has adverse effect in the application’s performance and design.
+- In terms of servlet and JSP, both often contains business logic and presentation tier.
+- The isolated development process by UI authors, business logic authors and controller authors may lead to delay in their respective modules development.
+
+
 ### Client-Server
 
 ![img](https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg)
@@ -64,6 +80,28 @@ firstApp.controller('MyController', function($scope) {
 ![img](https://user-images.githubusercontent.com/3501767/99105569-0a90d580-25e3-11eb-94b4-0cecc6db396c.png)
 
 [https://github.com/AYIDouble/Multithreading-Chat-Client-Java](https://github.com/AYIDouble/Multithreading-Chat-Client-Java)
+
+### Characteristics of a Client-Server Architecture
+
+- Client and server machines need different amount of hardware and software resources.
+- Client and server machines may belong to different vendors.
+- Horizzontal scalability (increase of the client machines) and vertical scalability (migration to a more powerful server or to a multiserver solution)
+- A client or server application interacts directly with a transport layer protocol to establish communication and to send or receive information.
+- The transport protocol then uses lower layer protocols to send or receive individual messages. Thus, a computer needs a complete stack of protocols to run either a client or a server.
+- A single server-class computer can offer multiple services at the same time; a separate server program is needed for each service.
+
+
+### Advantages Of Client Server Architecture
+- The data is centralized within the system that is maintained in a single place. 
+- The model is efficient in delivering resources to the client and also requires low-cost maintenance. 
+- It is easy to manage, and the data can be easily delivered to the client. 
+- As the data is centralized, this system is more secure and serves added security to the data. 
+- Within this type of model, more clients and servers can be embedded into the server, which makes the performance outstanding and increases the model’s overall flexibility. 
+
+### Disadvantages Of Client Server Architecture
+- Clients’ systems can get a virus or any malicious scripts if any are running on the server. 
+- Extra security must be added so that the data does not get spoofed in between the transmission. 
+- The main problem can be server down. When the server is down, the client loses its connection and will not access the data. 
 
 ### Boss-Worker
 
