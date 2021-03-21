@@ -384,8 +384,6 @@ Topic - devglan-test, Partition - 0, Value: test message - 2
 
 ## RESTful APIs
 
-![img](https://www.seobility.net/en/wiki/images/f/f1/Rest-API.png)
-
 ![img](https://miro.medium.com/max/1400/0*RRPP-ZT1U2nZFqDa)
 
 ### Principles
