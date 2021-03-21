@@ -209,12 +209,6 @@ public class Controller implements ActionListener {
 
 ![img](https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg)
 
-#### Chat Server
-
-![img](https://user-images.githubusercontent.com/3501767/99105569-0a90d580-25e3-11eb-94b4-0cecc6db396c.png)
-
-[https://github.com/AYIDouble/Multithreading-Chat-Client-Java](https://github.com/AYIDouble/Multithreading-Chat-Client-Java)
-
 ### Characteristics of a Client-Server Architecture
 
 - Client and server machines need different amount of hardware and software resources.
@@ -223,6 +217,30 @@ public class Controller implements ActionListener {
 - A client or server application interacts directly with a transport layer protocol to establish communication and to send or receive information.
 - The transport protocol then uses lower layer protocols to send or receive individual messages. Thus, a computer needs a complete stack of protocols to run either a client or a server.
 - A single server-class computer can offer multiple services at the same time; a separate server program is needed for each service.
+
+#### Chat Server
+
+![img](https://user-images.githubusercontent.com/3501767/99105569-0a90d580-25e3-11eb-94b4-0cecc6db396c.png)
+
+[https://github.com/AYIDouble/Multithreading-Chat-Client-Java](https://github.com/AYIDouble/Multithreading-Chat-Client-Java)
+
+
+### Web Browser
+
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First Webpage</title>
+	</head>
+	<body>
+		<h1>Happy Coding</h1>
+		<p>Hello world!</p>
+	</body>
+</html>
+```
+
+![img](https://happycoding.io/tutorials/html/images/html-1.png)
 
 
 ### Advantages Of Client Server Architecture
