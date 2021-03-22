@@ -538,6 +538,212 @@ Serverless computing can simplify the process of deploying code into production.
 
 ![img](https://miro.medium.com/max/1160/1*FZez47Cx47OO4eVS7XA_Sg.png)
 
-### AWS Lambda
+### Hello World
 
-![img](https://d1.awsstatic.com/aws-answers/answers-images/serverless-image-handler-architecture.043b4d76d253e5fe669791a85558b9908748e27b.png)
+![https://cloud.google.com/functions/docs/tutorials/http](https://cloud.google.com/functions/docs/tutorials/http)
+
+```
+exports.helloGET = (req, res) => {
+  res.send('Hello World!');
+};
+```
+
+```
+gcloud functions deploy helloGET \
+--runtime nodejs10 --trigger-http --allow-unauthenticated
+```
+
+```
+curl "https://REGION-PROJECT_ID.cloudfunctions.net/helloGET" 
+```
+
+### Optical Character Recognition
+
+![https://cloud.google.com/functions/docs/tutorials/ocr](https://cloud.google.com/functions/docs/tutorials/ocr)
+
+![img](https://cloud.google.com/functions/img/gcf-ocr.svg)
+
+Dependencies
+
+```
+// Get a reference to the Pub/Sub component
+const {PubSub} = require('@google-cloud/pubsub');
+const pubsub = new PubSub();
+// Get a reference to the Cloud Storage component
+const {Storage} = require('@google-cloud/storage');
+const storage = new Storage();
+
+// Get a reference to the Cloud Vision API component
+const Vision = require('@google-cloud/vision');
+const vision = new Vision.ImageAnnotatorClient();
+
+// Get a reference to the Translate API component
+const {Translate} = require('@google-cloud/translate').v2;
+const translate = new Translate();
+```
+
+Processing the image
+
+```
+exports.processImage = async event => {
+  const {bucket, name} = event;
+
+  if (!bucket) {
+    throw new Error(
+      'Bucket not provided. Make sure you have a "bucket" property in your request'
+    );
+  }
+  if (!name) {
+    throw new Error(
+      'Filename not provided. Make sure you have a "name" property in your request'
+    );
+  }
+
+  await detectText(bucket, name);
+  console.log(`File ${name} processed.`);
+};
+```
+
+Detecting Text in image
+
+```
+  console.log(`Looking for text in image ${filename}`);
+  const [textDetections] = await vision.textDetection(
+    `gs://${bucketName}/${filename}`
+  );
+  const [annotation] = textDetections.textAnnotations;
+  const text = annotation ? annotation.description : '';
+  console.log('Extracted text from image:', text);
+
+  let [translateDetection] = await translate.detect(text);
+  if (Array.isArray(translateDetection)) {
+    [translateDetection] = translateDetection;
+  }
+  console.log(
+    `Detected language "${translateDetection.language}" for ${filename}`
+  );
+
+  // Submit a message to the bus for each language we're going to translate to
+  const TO_LANGS = process.env.TO_LANG.split(',');
+  const topicName = process.env.TRANSLATE_TOPIC;
+
+  const tasks = TO_LANGS.map(lang => {
+    const messageData = {
+      text: text,
+      filename: filename,
+      lang: lang,
+    };
+
+    // Helper function that publishes translation result to a Pub/Sub topic
+    // For more information on publishing Pub/Sub messages, see this page:
+    //   https://cloud.google.com/pubsub/docs/publisher
+    return publishResult(topicName, messageData);
+  });
+
+  return Promise.all(tasks);
+};
+```
+
+Translating text
+
+```
+exports.translateText = async event => {
+  const pubsubData = event.data;
+  const jsonStr = Buffer.from(pubsubData, 'base64').toString();
+  const {text, filename, lang} = JSON.parse(jsonStr);
+
+  if (!text) {
+    throw new Error(
+      'Text not provided. Make sure you have a "text" property in your request'
+    );
+  }
+  if (!filename) {
+    throw new Error(
+      'Filename not provided. Make sure you have a "filename" property in your request'
+    );
+  }
+  if (!lang) {
+    throw new Error(
+      'Language not provided. Make sure you have a "lang" property in your request'
+    );
+  }
+
+  console.log(`Translating text into ${lang}`);
+  const [translation] = await translate.translate(text, lang);
+
+  console.log('Translated text:', translation);
+
+  const messageData = {
+    text: translation,
+    filename: filename,
+    lang: lang,
+  };
+
+  await publishResult(process.env.RESULT_TOPIC, messageData);
+  console.log(`Text translated to ${lang}`);
+};
+```
+
+### Slack Command
+
+[https://cloud.google.com/functions/docs/tutorials/slack](https://cloud.google.com/functions/docs/tutorials/slack)
+
+![img](https://cloud.google.com/functions/img/gcf-slack.svg)
+
+```
+const google = require('googleapis/build/src/apis/kgsearch');
+const {verifyRequestSignature} = require('@slack/events-api');
+
+// Get a reference to the Knowledge Graph Search component
+const kgsearch = google.kgsearch('v1');
+```
+
+```
+exports.kgSearch = async (req, res) => {
+  try {
+    if (req.method !== 'POST') {
+      const error = new Error('Only POST requests are accepted');
+      error.code = 405;
+      throw error;
+    }
+
+    // Verify that this request came from Slack
+    verifyWebhook(req);
+
+    // Make the request to the Knowledge Graph Search API
+    const response = await makeSearchRequest(req.body.text);
+
+    // Send the formatted message back to Slack
+    res.json(response);
+
+    return Promise.resolve();
+  } catch (err) {
+    console.error(err);
+    res.status(err.code || 500).send(err);
+    return Promise.reject(err);
+  }
+};
+```
+
+```
+  return new Promise((resolve, reject) => {
+    kgsearch.entities.search(
+      {
+        auth: process.env.KG_API_KEY,
+        query: query,
+        limit: 1,
+      },
+      (err, response) => {
+        console.log(err);
+        if (err) {
+          reject(err);
+          return;
+        }
+
+        // Return a formatted message
+        resolve(formatSlackMessage(query, response));
+      }
+    );
+  });
+};
+```
