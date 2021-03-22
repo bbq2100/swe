@@ -462,7 +462,22 @@ X-RateLimit-Remaining: 19
 
 ![img](https://i.ibb.co/rHpHrcF/Screenshot-2021-03-22-at-11-31-16.png)
 
+### Twitter
+
+[twitter](https://developer.twitter.com/en/docs/twitter-api/tweets/search/quick-start/recent-search)
+
+![img](https://i.ibb.co/D9zcR8c/Screenshot-2021-03-22-at-11-34-29.png)
+
 ## Microservice Architecture
+
+Microservices - also known as the microservice architecture - is an architectural style that structures an application as a collection of services that are
+
+- Highly maintainable and testable
+- Loosely coupled
+- Independently deployable
+- Organized around business capabilities
+- Owned by a small team
+- The microservice architecture enables the rapid, frequent and reliable delivery of large, complex applications. It also enables an organization to evolve its technology stack.
 
 ![img](https://martinfowler.com/articles/microservices/images/sketch.png)
 
@@ -472,7 +487,35 @@ X-RateLimit-Remaining: 19
 
 ![img](https://zdnet1.cbsistatic.com/hub/i/r/2018/07/30/3cd011df-430d-4cda-aab8-e6ae707eac1b/resize/770xauto/18ff327ee8ecfb2e024ad709d1142030/netflix-microservices-diagram-bruce-wong.jpg)
 
+
+### e-commerce shop
+
+![img](https://microservices.io/i/Microservice_Architecture.png)
+
 ![img](https://www.honeycomb.io/wp-content/uploads/2018/10/netflix-microservices-traffic-flow-768x466.png)
+
+### Video Platform
+
+![img](https://www.edureka.co/blog/wp-content/uploads/2018/03/Microservice-Architecture-Of-Use-Case-Microservices-Tutorial-Edureka.png)
+
+### Disadvantages
+
+- Developers must deal with the additional complexity of creating a distributed system:
+- Developers must implement the inter-service communication mechanism and deal with partial failure
+- Implementing requests that span multiple services is more difficult
+- Testing the interactions between services is more difficult
+- Implementing requests that span multiple services requires careful coordination between the teams
+- Developer tools/IDEs are oriented on building monolithic applications and don’t provide explicit support for developing distributed applications.
+- Deployment complexity. In production, there is also the operational complexity of deploying and managing a system comprised of many different services.
+- Increased memory consumption. The microservice architecture replaces N monolithic application instances with NxM services instances. If each service runs in its own JVM (or equivalent), which is usually necessary to isolate the instances, then there is the overhead of M times as many JVM runtimes. Moreover, if each service runs on its own VM (e.g. EC2 instance), as is the case at Netflix, the overhead is even higher.
+
+### Microservice vs Monolith
+
+![img](https://martinfowler.com/articles/microservices/images/decentralised-data.png)
+
+### Patterns
+
+![img](https://microservices.io/i/PatternsRelatedToMicroservices.jpg)
 
 ## Serverless
 
