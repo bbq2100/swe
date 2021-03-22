@@ -496,6 +496,16 @@ Microservices - also known as the microservice architecture - is an architectura
 
 ![img](https://www.edureka.co/blog/wp-content/uploads/2018/03/Microservice-Architecture-Of-Use-Case-Microservices-Tutorial-Edureka.png)
 
+### Advantages
+
+The advantages of microservices seem strong enough to have convinced some big enterprise players such as Amazon, Netflix, and eBay to adopt the methodology. Compared to more monolithic design structures, microservices offer:
+
+- Improved fault isolation: Larger applications can remain mostly unaffected by the failure of a single module.
+- Eliminate vendor or technology lock-in: Microservices provide the flexibility to try out a new technology stack on an individual service as needed. There won’t be as many dependency concerns and rolling back changes becomes much easier. With less code in play, there is more flexibility.
+- Ease of understanding: With added simplicity, developers can better understand the functionality of a service.
+- Smaller and faster deployments: Smaller codebases and scope = quicker deployments, which also allow you to start to explore the benefits of Continuous Deployment.
+- Scalability: Since your services are separate, you can more easily scale the most needed ones at the appropriate times, as opposed to the whole application. When done correctly, this can impact cost savings.
+
 ### Disadvantages
 
 - Developers must deal with the additional complexity of creating a distributed system:
