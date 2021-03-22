@@ -71,14 +71,14 @@ firstApp.controller('MyController', function($scope) {
 - Ease of modification — Because of the separation of responsibilities, future development or modification is easier
 - Multiple views for a model — Models can have multiple views
 
-### Cons of MVC Pattern:
+### Disadvantages
 
 - The complexity is high to develop the applications using this pattern.
 - Not right suitable for small applications which has adverse effect in the application’s performance and design.
 - In terms of servlet and JSP, both often contains business logic and presentation tier.
 - The isolated development process by UI authors, business logic authors and controller authors may lead to delay in their respective modules development.
 
-### Another Example
+### Java Swing
 
 ![img](https://examples.javacodegeeks.com/wp-content/uploads/2016/01/swing_mvc_components.jpg.webp)
 
