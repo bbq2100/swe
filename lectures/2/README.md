@@ -686,7 +686,7 @@ exports.translateText = async event => {
 
 ### Slack Command
 
-[img](https://cloud.google.com/functions/docs/tutorials/slack)
+[https://cloud.google.com/functions/docs/tutorials/slack](https://cloud.google.com/functions/docs/tutorials/slack)
 
 ![img](https://cloud.google.com/functions/img/gcf-slack.svg)
 
