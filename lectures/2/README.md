@@ -540,7 +540,7 @@ Serverless computing can simplify the process of deploying code into production.
 
 ### Hello World
 
-![https://cloud.google.com/functions/docs/tutorials/http](https://cloud.google.com/functions/docs/tutorials/http)
+[https://cloud.google.com/functions/docs/tutorials/http](https://cloud.google.com/functions/docs/tutorials/http)
 
 ```
 exports.helloGET = (req, res) => {
@@ -559,7 +559,7 @@ curl "https://REGION-PROJECT_ID.cloudfunctions.net/helloGET"
 
 ### Optical Character Recognition
 
-![https://cloud.google.com/functions/docs/tutorials/ocr](https://cloud.google.com/functions/docs/tutorials/ocr)
+[https://cloud.google.com/functions/docs/tutorials/ocr](https://cloud.google.com/functions/docs/tutorials/ocr)
 
 ![img](https://cloud.google.com/functions/img/gcf-ocr.svg)
 
@@ -686,7 +686,7 @@ exports.translateText = async event => {
 
 ### Slack Command
 
-[https://cloud.google.com/functions/docs/tutorials/slack](https://cloud.google.com/functions/docs/tutorials/slack)
+[img](https://cloud.google.com/functions/docs/tutorials/slack)
 
 ![img](https://cloud.google.com/functions/img/gcf-slack.svg)
 
