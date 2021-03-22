@@ -492,8 +492,6 @@ Microservices - also known as the microservice architecture - is an architectura
 
 ![img](https://microservices.io/i/Microservice_Architecture.png)
 
-![img](https://www.honeycomb.io/wp-content/uploads/2018/10/netflix-microservices-traffic-flow-768x466.png)
-
 ### Video Platform
 
 ![img](https://www.edureka.co/blog/wp-content/uploads/2018/03/Microservice-Architecture-Of-Use-Case-Microservices-Tutorial-Edureka.png)
@@ -518,6 +516,25 @@ Microservices - also known as the microservice architecture - is an architectura
 ![img](https://microservices.io/i/PatternsRelatedToMicroservices.jpg)
 
 ## Serverless
+
+Serverless computing is a cloud computing execution model in which the cloud provider allocates machine resources on demand, taking care of the servers on behalf of their customers. Serverless computing does not hold resources in volatile memory; computing is rather done in short bursts with the results persisted to storage. When an app is not in use, there are no computing resources allocated to the app. Pricing is based on the actual amount of resources consumed by an application.[1] It can be a form of utility computing. "Serverless" is a misnomer in the sense that servers are still used by cloud service providers to execute code for developers. However developers of serverless applications are not concerned with capacity planning, configuration, management, maintenance, operating or scaling of containers, VMs, or physical servers.
+
+Serverless computing can simplify the process of deploying code into production. Serverless code can be used in conjunction with code deployed in traditional styles, such as microservices or monoliths. Alternatively, applications can be written to be purely serverless and use no provisioned servers at all.[2] This should not be confused with computing or networking models that do not require an actual server to function, such as peer-to-peer (P2P).
+
+### Advantages:
+- No server management is necessary
+- Developers are only charged for the server space they use, reducing cost
+- Serverless architectures are inherently scalable
+- Quick deployments and updates are possible
+- Code can run closer to the end user, decreasing latency
+
+### Disadvantages
+
+- Testing and debugging become more challenging
+- Serverless computing introduces new security concerns
+- Serverless architectures are not built for long-running processes
+- Performance may be affected
+- Vendor lock-in is a risk
 
 ![img](https://miro.medium.com/max/1160/1*FZez47Cx47OO4eVS7XA_Sg.png)
 
