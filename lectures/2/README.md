@@ -456,7 +456,11 @@ X-RateLimit-Remaining: 19
 }
 ```
 
-### 
+### Stripe
+
+[https://stripe.com/docs/api/balance_transactions/object](https://stripe.com/docs/api/balance_transactions/object)
+
+![img](https://i.ibb.co/rHpHrcF/Screenshot-2021-03-22-at-11-31-16.png)
 
 ## Microservice Architecture
 
