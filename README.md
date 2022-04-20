@@ -1,6 +1,6 @@
 # Software Engineering Lecture
 
-![logo](https://knda.de/wp-content/uploads/2019/Betriebe/FOM_2015_CMYK_MitWortmarke.png)
+![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Hochschule_f%C3%BCr_Oekonomie_%26_Management_2012_logo.svg/480px-Hochschule_f%C3%BCr_Oekonomie_%26_Management_2012_logo.svg.png)
 
 ![](https://api.kindspeech.org/v1/badge)
 
